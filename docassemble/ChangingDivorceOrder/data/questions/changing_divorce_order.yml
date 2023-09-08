@@ -305,13 +305,7 @@ fields:
 id: why change final divorce order
 question: |
   Why do you want to change
-  % if type_of_final_order.all_true('property or debt', exclusive=True):
-  the order that divides your property and debt?
-  % elif type_of_final_order.all_true('spousal support', exclusive=True):
-  the spousal support in your divorce order?
-  % elif type_of_final_order.all_true('property or debt', 'spousal support'):
-  the order that divides your property and debt and also orders spousal support?
-  % endif
+  
 fields:
   - no label: why_change_divorce_order
     input type: radio
@@ -849,4 +843,4 @@ attachment:
   filename: changing_divorce_order
   variable name: changing_divorce_order_attachment[i]
   skip undefined: True
-  docx template file: changing_divorce_order_action_plan.docx
+  docx template file: dummy.docx
