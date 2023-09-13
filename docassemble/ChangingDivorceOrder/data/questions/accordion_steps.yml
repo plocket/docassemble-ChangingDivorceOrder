@@ -205,20 +205,30 @@ code: |
         step_list.append((tell_the_court_step, "tell_the_court_idx"))
       
     # Rows 24-27
-      if (type_of_final_order['custody order'] \
-        and why_change in('review', 'schedule')):
+      if type_of_final_order['custody order'] \
+        and why_change in('review', 'schedule'):
         step_list.append((modify_step, "modify_idx"))
         step_list.append((fill_modify_step, "fill_modify_idx"))
         step_list.append((calculate_child_support_step, "calculate_child_support_idx"))
         step_list.append((dont_wait_modify_custody_divorce_step, "dont_wait_modify_custody_divorce_idx"))
         images_list.append({'image': service_cert_modify_image, 'text': "Certificate of Service at the bottom of a Motion to Modify."})
+        if type_of_final_order.any_true('property or debt','spousal support') \
+        and why_change_divorce_order == 'problem' \
+        and final_order_date_within_30_days:
+          if not parents_agree:
+            step_list.append((pick_a_step_step, "pick_a_step_idx"))
+          step_list.append((appeal_step, 'appeal_idx'))
+          step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
+          step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
+          images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+        
         
       if type_of_final_order.any_true('property or debt', 'spousal support') \
         and why_change_divorce_order == 'changed circumstances':
         step_list.append((modify_divorce_step, "modify_divorce_idx"))
         step_list.append((fill_modify_divorce_step, "fill_modify_divorce_idx"))
-      
-          
+
+               
       #  Rows 28 - 29, 47-48 & 69-70
       if ((type_of_final_order['custody order'] \
         and why_change == 'problem') \
@@ -229,13 +239,44 @@ code: |
           step_list.append((fill_reconsider_step, "fill_reconsider_idx"))
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of Motion to Reconsider and Motion to Set Aside."})
           step_list.append((cert_of_service_step, "cert_of_service_idx"))
-          file_step_heading = 'File your Motion to Reconsider'
-          step_list.append((file_step, "file_idx"))
-          step_list.append((serve_step, "serve_idx"))
-          step_list.append((expect_reconsider_step, "expect_reconsider_idx"))
+          if (type_of_final_order['custody order'] \
+            and why_change in('review', 'schedule')) \
+            or (type_of_final_order.any_true('property or debt','spousal support') \
+            and why_change_divorce_order == 'changed circumstances'):
+              file_step_heading = 'File your motions'
+          else:
+              file_step_heading = 'File your Motion to Reconsider'
+      #    step_list.append((file_step, "file_idx"))
+      #    step_list.append((serve_step, "serve_idx"))
+      #    step_list.append((expect_reconsider_step, "expect_reconsider_idx"))
         
-
+      #  Rows 30 - 31, 47-48 & 69-70
+      if ((type_of_final_order['custody order'] \
+        and why_change == 'problem') \
+        and (type_of_final_order.any_true('property or debt','spousal support') \
+        and why_change_divorce_order == 'problem' )) \
+        and final_order_date_within_15_days:
+          if not parents_agree:
+            step_list.append((pick_a_step_step, "pick_a_step_idx"))
+          step_list.append((appeal_step, 'appeal_idx'))
+          step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
+          step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
+          images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+       #   step_list.append((cert_of_service_step, "cert_of_service_idx"))
+       #   step_list.append((file_step, "file_idx"))
+       #   step_list.append((serve_step, "serve_idx"))
+       #   step_list.append((expect_after_motion_step, "expect_after_motion_idx"))
+          
+       
+      step_list.append((cert_of_service_step, "cert_of_service_idx"))
+      step_list.append((file_step, "file_idx"))
+      step_list.append((serve_step, "serve_idx"))
+      step_list.append((expect_after_motion_step, "expect_after_motion_idx"))
       
+      
+   
+    
+        
 
     
   step_list.append((get_help, "get_help_idx"))

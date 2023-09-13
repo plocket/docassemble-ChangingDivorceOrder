@@ -386,7 +386,7 @@ fields:
 continue button field: final_order_date_question
 ---
 code: |
-  if type_of_final_order['custody order']:
+  if type_of_final_order['custody order'] and why_change == 'problem':
     final_order_date_options = [
       {'within 10 days': "It was in the last 10 days."},
       {'within 15 days': "It was more than 10 days ago, but within the last 15 days."},
@@ -396,7 +396,7 @@ code: |
   else:
     final_order_date_options = [
       {'within 10 days': "It was in the last 10 days."},
-      {'within 15 days': "It was more than 10 days ago, but within the last 30 days."},
+      {'within 30 days': "It was more than 10 days ago, but within the last 30 days."},
       {'more than 30 days': "It was more than 30 days ago."},
       {'unknown': "I do not know."}
                 ]
