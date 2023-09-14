@@ -157,12 +157,12 @@ fields:
   - no label: middle_of_case
     input type: radio
     choices:
-      - "Yes. The court issued a temporary or “interim” child support order and I want to change it   ": yes
+      - "Yes. The court issued an “interim” child support order and I want to change it   ": yes
       - "No.  The case is finished. The judge issued a final order and I want to change it. ": no
 ---
-id: What kind of temporary or interim order do you want to change
+id: What kind of interim order do you want to change
 question: |
-  What kind of temporary or interim order do you want to change?
+  What kind of interim order do you want to change?
 fields:
   - no label: type_of_interim_order
     input type: radio
@@ -182,14 +182,14 @@ fields:
 ---
 id: interim order date question
 question: |
-  What is the date the court sent your interim or temporary custody or parenting plan order?
+  What is the date the court sent your interim order?
 subquestion: |
-  You can find the date the court sent you your interim order at the bottom of your custody or Parenting Plan order.
+  Use the date at the bottom of your temporary or interim order. Sometimes this is called the 'distribution date'.
   
   [FILE docassemble.AKA2JBranding:CertOfDistrib_divorce_custody.PNG, 100%, This is a screenshot of the bottom of the order with the date the court sent your order.]
   
 fields:
-  - "date": interim_order_date
+  - "The date of the temporary or interim or  order is": interim_order_date
     datatype: date  
     max: ${ today() }
     disable if: interim_order_period
@@ -210,14 +210,14 @@ fields:
       #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
       You have different ways to ask the court to change your child support order when your situation changes.  It can depend on when the court sent you the order.
   
-      For the first 10 days after {the court sent your custody or Parenting Plan order}, you can file a “Motion to Reconsider."  It asks the trial judge to fix something they overlooked or misunderstood.
+      For the first 10 days after {the court sent the order to you}, you can file a **Motion to Reconsider**.  It asks the trial judge to fix something they overlooked or misunderstood.
        
-        After 10 days, you can file a “Motion to Modify.”
+        After 10 days, you can file a **Motion to Modify**.
        
         Your Action Plan will not include information about options that do not apply in your case.
 terms:
-  the court sent your custody or Parenting Plan order: |
-      You can find the date the court sent you your custody or Parenting Plan order on the last page,  at the bottom of the order.
+  the court sent the order to you: |
+      You can find the date the court sent your order on the last page, at the bottom of the order.
       
 continue button field: interim_order_date_question  
 ---
@@ -231,21 +231,24 @@ code: |
 ---
 id: Can you and the other parent agree
 question: |
-  Can you and the other parent agree?
+  Can you and ${ other_party_in_case } agree?
 subquestion: |
-  If you want to change a Custody and Parenting Plan or Child Support Order, you can ask the other parent. 
+  % if middle_of_case == 'yes':
+  If you want to change a court order in your divorce case, you can ask ${ other_party_in_case }.
+  % else:
+  If you want to change a court order from your divorce case, you can ask ${ other_party_in_case }.
+  % endif
   
   If you both agree, you can write out an agreement to tell the court.
   
-  Do you want more information about making agreements with the other parent and telling the court?
+  Do you want more information about making agreements with ${ other_party_in_case } and telling the court?
 yesno: parents_agree
 # fields:
-#  - "Can you and the other parent agree?": parents_agree
+#  - "Can you and ${ other_party_in_case } agree?": parents_agree
 #    datatype: yesno
 under: |
   #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
-  If you do not feel safe asking the other parent to make a change, you can ask the judge to decide by filing a written request. You do not have to ask the other parent first. 
-
+  If you do not feel safe asking ${ other_party_in_case } to make a change, you can ask the judge to decide by filing a written request. You do not have to ask ${ other_party_in_case } first. 
 ---
 id: Old A2J Author question - no longer in use - Do you want information about filing a Motion to Reconsider
 question: |
@@ -304,14 +307,15 @@ fields:
 ---
 id: why change final divorce order
 question: |
-  Why do you want to change
-  % if type_of_final_order.all_true('property or debt', exclusive=True):
-  the order that divides your property and debt?
-  % elif type_of_final_order.all_true('spousal support', exclusive=True):
-  the spousal support in your divorce order?
-  % elif type_of_final_order.all_true('property or debt', 'spousal support'):
-  the order that divides your property and debt and also orders spousal support?
+  Why do you want to change 
+  % if type_of_final_order.all_true('spousal support','property or debt'):
+  the order about spousal support and dividing property and debt?
+  % elif type_of_final_order.all_true('property or debt'):
+  the order about dividing property and debt?
+  % elif type_of_final_order.all_true('spousal support'):
+  the order about spousal support?
   % endif
+  
 fields:
   - no label: why_change_divorce_order
     input type: radio
@@ -324,16 +328,22 @@ fields:
       - There is a problem with the order: problem
   - note: |
       #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
-      Changing your divorce order is called “modifying” it.  The rules are different for changing spousal support and the property and debt division.
+      Changing your divorce order is called “modifying” it.  The rules are different for changing spousal support and the property and debt division.      
+       % if type_of_final_order['spousal support']:
+       
       **Change Spousal Support**
+      
       The courts will generally only change spousal support if there is a substantial change of circumstances.  Some examples are:
      
       * Spouse A was ordered to pay Spouse B spousal support.  Spouse B was very ill and could not work.  Spouse B is now better and has a full-time job.
       * Spouse A was ordered to pay Spouse B spousal support for 4 years so Spouse B could get a degree that would help them earn more money.  Spouse B got their degree in 3 years and not has a full-time job earning more money because of the degree.
-     
+      % endif
+      % if type_of_final_order['property or debt']:
+      
       **Change the Property and Debt Division**
      
-      Changing the outcome of final property and debt decisions in a divorce case can be really tough. Once the court decides who gets what, it's not easy to undo those decisions. For instance, if the court gives one spouse the house, they might sell it, and then it's impossible to get it back if the other spouse later wants the court to award them the house.  Another example is when the court orders one person to receive some money from the marriage. If they spend that money, it can't be taken back later. 
+      Changing the outcome of final property and debt decisions in a divorce case can be really tough. Once the court decides who gets what, it's not easy to undo those decisions. For instance, if the court gives one spouse the house, they might sell it, and then it's impossible to get it back if the other spouse later wants the court to award them the house.  Another example is when the court orders one person to receive some money from the marriage. If they spend that money, it can't be taken back later.
+      % endif 
 ---
 id: What is the date on your order
 question: |
@@ -358,15 +368,38 @@ fields:
   - no label: guess_final_order_date
     enable if: final_order_period 
     datatype: radio
-    choices:
-      - "It was in the last 10 days.": within 10 days
-      - "It was more than 10 days ago, but within the last 15 days.": within 15 days
-      - "It was more than 15 days ago": more than 15 days
-      - I do not know: unknown
+    code: |
+      final_order_date_options
+#      choices:
+#      - "It was in the last 10 days.": within 10 days
+#      - "It was more than 10 days ago, but within the last 15 days.": within 15 days
+#      - "It was more than 15 days ago": more than 15 days
+#      - I do not know: unknown
   - note: |
       #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
-      Do we want to put anything in here?
+      Most of the time, custody, parenting plan, dividing property and debt, and spousal support are all in 1 order. The date the court sent the order to you is at the bottom of the last page. 
+      
+      Sometimes, the judge makes these orders at different times. 
+      
+      If you want to change orders with different dates, it can be complicated to know which date to use. You may want to talk to a lawyer or contact the [Family Law Self Help Center](https://courts.alaska.gov/shc/family/shcabout.htm#hours) for help.
+
 continue button field: final_order_date_question
+---
+code: |
+  if type_of_final_order['custody order'] and why_change == 'problem':
+    final_order_date_options = [
+      {'within 10 days': "It was in the last 10 days."},
+      {'within 15 days': "It was more than 10 days ago, but within the last 15 days."},
+      {'more than 15 days': "It was more than 15 days ago."},
+      {'unknown': "I do not know."}
+                ]
+  else:
+    final_order_date_options = [
+      {'within 10 days': "It was in the last 10 days."},
+      {'within 30 days': "It was more than 10 days ago, but within the last 30 days."},
+      {'more than 30 days': "It was more than 30 days ago."},
+      {'unknown': "I do not know."}
+                ]
 ---
 code: |
   final_order_date_question
@@ -374,15 +407,28 @@ code: |
   if ((defined('final_order_date') and date_difference(starting=final_order_date, ending=today()).days <= 10 )) or (defined('final_order_period') and guess_final_order_date == 'within 10 days'):
     final_order_date_within_10_days = True
     final_order_date_within_15_days = False
+    final_order_date_within_30_days = False
   if ((defined('final_order_date') and 10 < date_difference(starting=final_order_date, ending=today()).days <= 15 )) or (defined('final_order_period') and guess_final_order_date == 'within 15 days'):
     final_order_date_within_10_days = False
     final_order_date_within_15_days = True
-  if ((defined('final_order_date') and date_difference(starting=final_order_date, ending=today()).days > 15 )) or (defined('final_order_period') and guess_final_order_date == 'more than 15 days'):
+    final_order_date_within_30_days = False
+  if ((defined('final_order_date') and 10 < date_difference(starting=final_order_date, ending=today()).days <= 30 )) or (defined('final_order_period') and guess_final_order_date == 'within 30 days'):
+    final_order_date_within_10_days = False
+    final_order_date_within_15_days = True
+    final_order_date_within_30_days = True
+  if ((defined('final_order_date') and 15 < date_difference(starting=final_order_date, ending=today()).days <= 30 )) or (defined('final_order_period') and guess_final_order_date == 'more than 15 days'):
     final_order_date_within_10_days = False
     final_order_date_within_15_days = False
+    final_order_date_within_30_days = True
+  if ((defined('final_order_date') and date_difference(starting=final_order_date, ending=today()).days > 30 )) or (defined('final_order_period') and guess_final_order_date == 'more than 30 days'):
+    final_order_date_within_10_days = False
+    final_order_date_within_15_days = False
+    final_order_date_within_30_days = False
   if (defined('final_order_period') and guess_final_order_date == 'unknown'):
     final_order_date_within_10_days = False
     final_order_date_within_15_days = False
+    final_order_date_within_30_days = False
+
 ---
 id: get information about choices if user does not know final order date
 question: |
@@ -600,6 +646,8 @@ fields:
     input type: radio
     choices:
       - A Motion to Modify a Custody and Parenting Plan or Child Support Order.: custody
+      - A motion to change the spousal support order or the order that divides property and debt - Something like the **Request to  Modify Order or Decree Concerning Spousal Maintenance or Property Allocation**: divorce
+      - A motion that asks the court to change custody or your parenting plan order, child support **and** spousal support **or** the order that divides property and debt.: all divorce
       - A Motion to Reconsider.: reconsider
       - A Motion to Set Aside Judgment or Order.: set aside
       - An Appeal: appeal
@@ -849,4 +897,4 @@ attachment:
   filename: changing_divorce_order
   variable name: changing_divorce_order_attachment[i]
   skip undefined: True
-  docx template file: changing_divorce_order_action_plan.docx
+  docx template file: dummy.docx
