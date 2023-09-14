@@ -390,7 +390,7 @@ code: |
     final_order_date_options = [
       {'within 10 days': "It was in the last 10 days."},
       {'within 15 days': "It was more than 10 days ago, but within the last 15 days."},
-      {'more than 15 days': "It was more than 30 days ago."},
+      {'more than 15 days': "It was more than 15 days ago."},
       {'unknown': "I do not know."}
                 ]
   else:
