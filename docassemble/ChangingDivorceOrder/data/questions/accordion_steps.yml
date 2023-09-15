@@ -98,6 +98,7 @@ code: |
     step_list.append((expect_after_motion_step, "expect_after_motion_idx"))
   
   elif user_need == 'respond to custody':
+    
   
     # Rows 2 - 10
     if type_of_response in('custody','divorce', 'all divorce'):
@@ -175,8 +176,10 @@ code: |
       step_list.append((motion_forms_step, "motion_forms_idx"))
       images_list.append({'image': service_cert_motion_shc_1300_image, 'text': "Certificate of Service at the bottom of a motion."})
       step_list.append((cert_of_service_step, "cert_of_service_idx")) 
+      file_step_heading = 'File your Motion to Modify'
       step_list.append((file_step, "file_idx"))
       step_list.append((serve_step, "serve_idx"))
+      motion_type = 'Motion to Modify'
       step_list.append((expect_after_motion_step, "expect_after_motion_idx"))
    
     # Rows 22-23 
@@ -212,12 +215,17 @@ code: |
         step_list.append((calculate_child_support_step, "calculate_child_support_idx"))
         step_list.append((dont_wait_modify_custody_divorce_step, "dont_wait_modify_custody_divorce_idx"))
         images_list.append({'image': service_cert_modify_image, 'text': "Certificate of Service at the bottom of a Motion to Modify."})
+        if type_of_final_order.all_true('custody order', exclusive = True):
+          file_step_heading = 'File your Modify Custody, Visitation & Support Packet' 
         
         
       if type_of_final_order.any_true('property or debt', 'spousal support') \
         and why_change_divorce_order == 'changed circumstances':
         step_list.append((modify_divorce_step, "modify_divorce_idx"))
         step_list.append((fill_modify_divorce_step, "fill_modify_divorce_idx"))
+        if type_of_final_order.any_true('property or debt', 'spousal support', exclusive = True) \
+          and (type_of_final_order.all_false('custody order', exclusive = True) or (type_of_final_order['custody order'] and why_change in('review', 'schedule'))):
+          file_step_heading = 'File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation'
 
                
     # Rows 28 - 29, 47-48 & 69-70
@@ -254,6 +262,7 @@ code: |
           step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
           step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+          file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
        #   step_list.append((cert_of_service_step, "cert_of_service_idx"))
        #   step_list.append((file_step, "file_idx"))
        #   step_list.append((serve_step, "serve_idx"))
@@ -269,6 +278,7 @@ code: |
         step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
         step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
         images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+        file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
           
     # Rows 24-27
       if type_of_final_order['custody order'] \
@@ -281,6 +291,8 @@ code: |
           step_list.append((appeal_step, 'appeal_idx'))
           step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
           step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
+          images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+          file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
           
     # Rows 24-27
       if type_of_final_order['custody order'] \
@@ -291,6 +303,8 @@ code: |
         and not final_order_date_within_30_days:
           step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
           step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
+          images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+          file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
 
     # Rows
       if type_of_final_order.any_true('property or debt', 'spousal support', exclusive=True) and why_change_divorce_order == 'problem' \
@@ -300,6 +314,8 @@ code: |
         step_list.append((appeal_step, 'appeal_idx'))
         step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
         step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
+        images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+        file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
 
     # Rows
       if type_of_final_order.any_true('property or debt', 'spousal support', exclusive=True) and why_change_divorce_order == 'problem' \
@@ -307,7 +323,8 @@ code: |
         and not final_order_date_within_30_days:
         step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
         step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
-          
+        images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+        file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'  
       
       
             
@@ -321,6 +338,8 @@ code: |
             if unknown_final_date['set aside']:
               step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
               step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
+              images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+
             if unknown_final_date.any_true('reconsider','set aside'):
               images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Reconsider and the Motion to Set Aside."})
               if not unknown_final_date['set aside']:
@@ -330,6 +349,7 @@ code: |
             #  if unknown_final_date['reconsider']:
             #    step_list.append((expect_reconsider_step, "expect_reconsider_idx"))
               if unknown_final_date['set aside']:
+                file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
                 motion_type = 'Motion to Set Aside'
    
       if defined('final_order_period') \
