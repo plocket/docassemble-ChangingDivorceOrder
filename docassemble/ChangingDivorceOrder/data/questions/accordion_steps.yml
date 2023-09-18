@@ -8,36 +8,25 @@ question: |
   # <i class="fa-thin fa-list"></i>Your Personal Action Plan is ready!
   % endif
 subquestion: |
-  
-  % if len(step_list) < 2:
-  For help with forms or understanding the process:
-  <ul><li>Call the Family Law Self-Help Center
-  <br>
-  (907) 264-0851 or<br>  
-  (866) 279-0851.</li>
-  <li>See the court’s <a href="https://courts.alaska.gov/shc/family">Family Law Self-Help Center web pages</a>.</li>
-  </ul>
-  
-  Many lawyers offer free or flat fee consultations without having to hire them for the whole case. [Find a Lawyer](https://courts.alaska.gov/shc/shclawyer.htm).
-  
-  Depending on your income, you may qualify for [Alaska Free Legal Answers](https://alaska.freelegalanswers.org).
-  
-  Depending on your income and circumstances, you may qualify for a free lawyer from [Alaska Legal Services](https://alsc-law.org/apply-for-services).
-  % else:
-  
-  % if user_need in('change custody order','change foreign custody order'):
+  % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order == 'custody order'):
   #### Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps
-  % elif user_need ==  'respond to custody':
+  % elif user_need ==  'respond to motion in divorce':
   % if type_of_response == 'appeal':
   #### Your Personal Action Plan for responding to the appeal in ${ len(step_list) } steps
   % else:
   #### Your Personal Action Plan for responding to the motion in ${ len(step_list) } steps
-  % endif 
+  % endif
+  % else:
+  % if middle_of_case == 'yes':
+  #### Your Personal Action Plan for changing a court order during your divorce case in ${ len(step_list) } steps
+  % else:
+  #### Your Personal Action Plan for changing a court order from your divorce case in ${ len(step_list) } steps
+  % endif
   % endif
   % for iteration_index, step_tuple in enumerate( step_list ):
   ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
   % endfor
-  % endif
+  
   ${ download_buttons_html(al_user_bundle) }
   
 buttons:
@@ -63,7 +52,7 @@ code: |
     pdf_pap_multistep_subtitle = True
   images_list = []
   distribution_certificate_list = []
-  other_party_in_case  = 'the other parent'
+  other_party_in_case  = 'your spouse or ex'
   case_type = 'divorce'
   # certificate_of_service_image = ''
   distribution_certificate_list.append({'image': distrib_cert_custody_divorce_image, 'text': "Certificate of Distribution shows the date the court sent your order to you."})
@@ -81,6 +70,7 @@ code: |
     
   # Row 1
   elif user_need == 'change foreign custody order':
+    other_party_in_case  = 'the other parent'
     step_list.append((foreign_order_step, "foreign_order_idx"))
     step_list.append((ak_jurisdiction_step, "ak_jurisdiction_idx"))
     step_list.append((register_order_step, "register_order_idx"))
@@ -97,21 +87,30 @@ code: |
     motion_type = 'Motion to Modify'
     step_list.append((expect_after_motion_step, "expect_after_motion_idx"))
   
-  elif user_need == 'respond to custody':
-    
+  elif user_need == 'respond to motion in divorce':
   
     # Rows 2 - 10
-    if type_of_response in('custody','divorce', 'all divorce'):
+    if type_of_response == 'custody':
       motion_type = 'Motion to Modify'
+      other_party_in_case = 'the other parent'
+    # Rows 2 - 10
+    if type_of_response in('divorce', 'all divorce'):
+      motion_type = 'Motion to Modify'
+      other_party_in_case = 'your spouse or ex'
 
     # Row 11
     if type_of_response == 'reconsider' and respond_to_reconsider:
       step_list.append((respond_to_reconsider_step, "respond_to_reconsider_idx"))
+      other_party_in_case = 'your spouse or ex'
       
     # Row 12 - 14
     if type_of_response == 'set aside':
-      if not type_of_response in('custody','divorce','all divorce'):
-        motion_type = 'Motion to Set Aside Judgment or Order'
+      motion_type = 'Motion to Set Aside Judgment or Order'
+      other_party_in_case = 'your ex'
+      
+    # Row 12 - 14
+    if type_of_response == 'appeal':
+      other_party_in_case = 'your ex'
     
     # Rows 2, 5, 8 & 12 
     if (type_of_response in('custody','divorce', 'all divorce') and respond_to_custody == 'agree') or (type_of_response == 'set aside' and respond_to_set_aside == 'agree'):
@@ -135,6 +134,7 @@ code: |
     
     # Row 15
     if type_of_response == 'appeal' and respond_to_appeal == 'agree':
+      
       step_list.append((appeal_response_step, "appeal_response_idx"))
       step_list.append((appeal_contact_parent_step, "appeal_contact_parent_idx"))
       step_list.append((tell_supreme_court_step, "tell_supreme_court_idx"))
@@ -176,10 +176,8 @@ code: |
       step_list.append((motion_forms_step, "motion_forms_idx"))
       images_list.append({'image': service_cert_motion_shc_1300_image, 'text': "Certificate of Service at the bottom of a motion."})
       step_list.append((cert_of_service_step, "cert_of_service_idx")) 
-      file_step_heading = 'File your Motion to Modify'
       step_list.append((file_step, "file_idx"))
       step_list.append((serve_step, "serve_idx"))
-      motion_type = 'Motion to Modify'
       step_list.append((expect_after_motion_step, "expect_after_motion_idx"))
    
     # Rows 22-23 
