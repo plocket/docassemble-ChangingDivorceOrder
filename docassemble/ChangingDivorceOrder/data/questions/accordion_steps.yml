@@ -8,7 +8,7 @@ question: |
   # <i class="fa-thin fa-list"></i>Your Personal Action Plan is ready!
   % endif
 subquestion: |
-  % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order == 'custody order'):
+  % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order.all_true('custody order', exclusive = True)):
   #### Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps
   % elif user_need ==  'respond to motion in divorce':
   % if type_of_response == 'appeal':
@@ -198,7 +198,10 @@ code: |
 
        ##################### after final order
     if middle_of_case == 'no':
-      other_party_in_case = 'your ex spouse'
+      if type_of_final_order.all_true('custody order', exclusive = True):
+        other_party_in_case = 'the other parent'
+      else:
+        other_party_in_case = 'your ex'
       
       if parents_agree:
         step_list.append((pick_a_step_step, "pick_a_step_idx"))
