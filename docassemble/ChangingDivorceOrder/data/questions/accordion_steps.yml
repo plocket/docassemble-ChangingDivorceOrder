@@ -239,7 +239,6 @@ code: |
           step_list.append((learn_reconsider_step, "learn_reconsider_idx"))
           step_list.append((fill_reconsider_step, "fill_reconsider_idx"))
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of Motion to Reconsider and Motion to Set Aside."})
-          step_list.append((cert_of_service_step, "cert_of_service_idx"))
           if (type_of_final_order['custody order'] \
             and why_change in('review', 'schedule')) \
             or (type_of_final_order.any_true('property or debt','spousal support') \
