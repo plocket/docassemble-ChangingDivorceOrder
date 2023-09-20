@@ -8,7 +8,7 @@ Scenario: Row #32
     | var | value | trigger |
     | user_need | change divorce order |  |
     | middle_of_case | no |  |
-    | type_of_final_order['custody'] | True |  |
+    | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
     | final_order_date | today - 16 |  |
     | parents_agree | True |  |
@@ -33,7 +33,7 @@ Scenario: Row #32b
     | var | value | trigger |
     | user_need | change divorce order |  |    
     | middle_of_case | no |  |
-    | type_of_final_order['custody'] | True |  
+    | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
     | final_order_period | True | |
     | guess_final_order_date | more than 15 days |  |
@@ -60,7 +60,7 @@ Scenario: Row #33
     | var | value | trigger |
     | user_need | change divorce order |  |
     | middle_of_case | no |  |
-    | type_of_final_order['custody'] | True |  
+    | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
     | final_order_date | today - 16 |  |
     | parents_agree | False |  |
@@ -82,7 +82,7 @@ Scenario: Row #33b
     | var | value | trigger |
     | user_need | change divorce order |  |
     | middle_of_case | no |  |
-    | type_of_final_order['custody'] | True |  
+    | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
     | final_order_period | True | |
     | guess_final_order_date | more than 15 days |  |
@@ -113,13 +113,13 @@ Scenario: Row #51
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I should see the phrase "Find out if you and the other parent agree"
+    And I should see the phrase "Find out if you and your ex agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service" 
     And I should see the phrase "File your Motion to Set Aside"
-    And I should see the phrase "Serve the other parent" 
+    And I should see the phrase "Serve your ex" 
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"
@@ -139,13 +139,13 @@ Scenario: Row #51b
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I should see the phrase "Find out if you and the other parent agree"  
+    And I should see the phrase "Find out if you and your ex agree"  
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service" 
     And I should see the phrase "File your Motion to Set Aside"
-    And I should see the phrase "Serve the other parent" 
+    And I should see the phrase "Serve your ex" 
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"
@@ -168,7 +168,7 @@ Scenario: Row #52
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service" 
   And I should see the phrase "File your Motion to Set Aside"
-  And I should see the phrase "Serve the other parent" 
+  And I should see the phrase "Serve your ex" 
   And I should see the phrase "What to expect after you file a Motion to Set Aside"
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
@@ -191,7 +191,7 @@ Scenario: Row #52b
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service" 
   And I should see the phrase "File your Motion to Set Aside"
-  And I should see the phrase "Serve the other parent" 
+  And I should see the phrase "Serve your ex" 
   And I should see the phrase "What to expect after you file a Motion to Set Aside"
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
@@ -265,7 +265,7 @@ Scenario: Row #74
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service" 
   And I should see the phrase "File your Motion to Set Aside"
-  And I should see the phrase "Serve the other parent" 
+  And I should see the phrase "Serve your ex" 
   And I should see the phrase "What to expect after you file a Motion to Set Aside"
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
@@ -288,7 +288,7 @@ Scenario: Row #74b
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service" 
   And I should see the phrase "File your Motion to Set Aside"
-  And I should see the phrase "Serve the other parent" 
+  And I should see the phrase "Serve your ex" 
   And I should see the phrase "What to expect after you file a Motion to Set Aside"
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
