@@ -251,25 +251,21 @@ code: |
       #    step_list.append((serve_step, "serve_idx"))
       #    step_list.append((expect_reconsider_step, "expect_reconsider_idx"))
 
-        
+    # and type_of_final_order.any_true('property or debt','spousal support') \
+    # and why_change_divorce_order == 'problem' \    
     # Rows 30 - 31, 49-50 & 71-72
       if type_of_final_order['custody order'] \
         and why_change == 'problem' \
-        and type_of_final_order.any_true('property or debt','spousal support') \
-        and why_change_divorce_order == 'problem' \
         and final_order_date_within_15_days:
-          if not parents_agree:
-            step_list.append((pick_a_step_step, "pick_a_step_idx"))
           step_list.append((appeal_step, 'appeal_idx'))
           step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
           step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
+          if not type_of_final_order.any_true('property or debt','spousal support'):
+            file_step_heading = 'File your Motion to Set Aside'
+            motion_type = 'Motion to Set Aside'
           file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
-       #   step_list.append((cert_of_service_step, "cert_of_service_idx"))
-       #   step_list.append((file_step, "file_idx"))
-       #   step_list.append((serve_step, "serve_idx"))
-       #   step_list.append((expect_after_motion_step, "expect_after_motion_idx"))
-       
+          
     # Rows 32 - 33, 51-52 & 73-74
     # and type_of_final_order.any_true('property or debt','spousal support')
     # and why_change_divorce_order == 'problem'
@@ -291,8 +287,6 @@ code: |
         and type_of_final_order.any_true('property or debt','spousal support') \
         and why_change_divorce_order == 'problem' \
         and final_order_date_within_30_days:
-          if not parents_agree:
-            step_list.append((pick_a_step_step, "pick_a_step_idx"))
           step_list.append((appeal_step, 'appeal_idx'))
           step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
           step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
@@ -315,8 +309,6 @@ code: |
       if type_of_final_order.any_true('property or debt', 'spousal support', exclusive=True) \
         and why_change_divorce_order == 'problem' \
         and final_order_date_within_30_days:
-        if not parents_agree:
-          step_list.append((pick_a_step_step, "pick_a_step_idx"))
         step_list.append((appeal_step, 'appeal_idx'))
         step_list.append((learn_set_aside_step, "learn_set_aside_idx"))
         step_list.append((fill_set_aside_step, "fill_set_aside_idx"))
