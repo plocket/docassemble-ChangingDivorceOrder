@@ -10,7 +10,7 @@ Scenario: Row #32
     | middle_of_case | no |  |
     | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
-    | final_order_date | today - 16 |  |
+    | final_order_date | today - 17 |  |
     | parents_agree | True |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 10 steps"
@@ -62,7 +62,7 @@ Scenario: Row #33
     | middle_of_case | no |  |
     | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
-    | final_order_date | today - 16 |  |
+    | final_order_date | today - 17 |  |
     | parents_agree | False |  |
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 7 steps"
@@ -108,7 +108,7 @@ Scenario: Row #54
     | middle_of_case | no |  |
     | type_of_final_order['spousal support'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | True |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
@@ -160,7 +160,7 @@ Scenario: Row #55
     | middle_of_case | no |  |
     | type_of_final_order['spousal support'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | False |  |
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
@@ -206,7 +206,7 @@ Scenario: Row #76
     | middle_of_case | no |  |
     | type_of_final_order['property or debt'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | True |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
@@ -257,7 +257,7 @@ Scenario: Row #77
     | middle_of_case | no |  |
     | type_of_final_order['property or debt'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | False |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
