@@ -103,7 +103,7 @@ Scenario: Row #20
         | user_need | change divorce order |  |    
         | middle_of_case | yes |  |    
         | type_of_interim_order | motion |  |
-        | interim_order_date | today - 11 |  | 
+        | interim_order_date | today - 12 |  | 
         | parents_agree | True |  |
     And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 9 steps"
@@ -150,7 +150,7 @@ Scenario: Row #21
         | user_need | change divorce order |  |    
         | middle_of_case | yes |  |    
         | type_of_interim_order | motion |  |
-        | interim_order_date | today - 11 |  | 
+        | interim_order_date | today - 12 |  | 
         | parents_agree | False |  |
     And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 6 steps"

@@ -99,8 +99,8 @@ Scenario: Row #29b
   And I download "changing_divorce_order.pdf"
 
 
-@row47  
-Scenario: Row #47
+@row50  
+Scenario: Row #50
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -124,8 +124,8 @@ Scenario: Row #47
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"
 
-@row47b
-Scenario: Row #47b
+@row50b
+Scenario: Row #50b
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -151,8 +151,8 @@ Scenario: Row #47b
     And I download "changing_divorce_order.pdf"
 
 
-@row48
-Scenario: Row #48
+@row51
+Scenario: Row #51
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -173,8 +173,8 @@ Scenario: Row #48
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
 
-@row48b
-Scenario: Row #48b
+@row51b
+Scenario: Row #51b
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -197,8 +197,8 @@ Scenario: Row #48b
   And I download "changing_divorce_order.pdf"
 
 
-@row69
-Scenario: Row #69
+@row72
+Scenario: Row #72
     Given I start the interview at "changing_divorce_order.yml"
     And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -222,8 +222,8 @@ Scenario: Row #69
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"
    
-@row69b
-Scenario: Row #69b
+@row72b
+Scenario: Row #72b
     Given I start the interview at "changing_divorce_order.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger |
@@ -247,8 +247,8 @@ Scenario: Row #69b
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"   
     
-@row70
-Scenario: Row #70
+@row73
+Scenario: Row #73
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -269,8 +269,8 @@ Scenario: Row #70
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
 
-@row70b
-Scenario: Row #70b
+@row73b
+Scenario: Row #73b
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |

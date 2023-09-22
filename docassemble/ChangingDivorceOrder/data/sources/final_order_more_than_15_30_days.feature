@@ -10,7 +10,7 @@ Scenario: Row #32
     | middle_of_case | no |  |
     | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
-    | final_order_date | today - 16 |  |
+    | final_order_date | today - 17 |  |
     | parents_agree | True |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 10 steps"
@@ -62,7 +62,7 @@ Scenario: Row #33
     | middle_of_case | no |  |
     | type_of_final_order['custody order'] | True |  |
     | why_change | problem |  |
-    | final_order_date | today - 16 |  |
+    | final_order_date | today - 17 |  |
     | parents_agree | False |  |
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 7 steps"
@@ -99,8 +99,8 @@ Scenario: Row #33b
   And I download "changing_divorce_order.pdf"
 
 
-@row51  
-Scenario: Row #51
+@row54
+Scenario: Row #54
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -108,7 +108,7 @@ Scenario: Row #51
     | middle_of_case | no |  |
     | type_of_final_order['spousal support'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | True |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
@@ -124,8 +124,8 @@ Scenario: Row #51
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"
 
-@row51b
-Scenario: Row #51b
+@row54b
+Scenario: Row #54b
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -151,8 +151,8 @@ Scenario: Row #51b
     And I download "changing_divorce_order.pdf"
 
 
-@row52
-Scenario: Row #52
+@row55
+Scenario: Row #55
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -160,7 +160,7 @@ Scenario: Row #52
     | middle_of_case | no |  |
     | type_of_final_order['spousal support'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | False |  |
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
@@ -173,8 +173,8 @@ Scenario: Row #52
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
 
-@row52b
-Scenario: Row #52b
+@row55b
+Scenario: Row #55b
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -197,8 +197,8 @@ Scenario: Row #52b
   And I download "changing_divorce_order.pdf"
 
 
-@row73
-Scenario: Row #73
+@row76
+Scenario: Row #76
     Given I start the interview at "changing_divorce_order.yml"
     And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -206,7 +206,7 @@ Scenario: Row #73
     | middle_of_case | no |  |
     | type_of_final_order['property or debt'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | True |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
@@ -222,8 +222,8 @@ Scenario: Row #73
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"
    
-@row73b
-Scenario: Row #73b
+@row76b
+Scenario: Row #76b
     Given I start the interview at "changing_divorce_order.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger |
@@ -248,8 +248,8 @@ Scenario: Row #73b
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"   
     
-@row74
-Scenario: Row #74
+@row77
+Scenario: Row #77
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -257,7 +257,7 @@ Scenario: Row #74
     | middle_of_case | no |  |
     | type_of_final_order['property or debt'] | True |  |
     | why_change_divorce_order | problem |  |
-    | final_order_date | today - 31 |  |
+    | final_order_date | today - 32 |  |
     | parents_agree | False |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
@@ -270,8 +270,8 @@ Scenario: Row #74
     And I should see the phrase "Get more information or help"
     And I download "changing_divorce_order.pdf"
 
-@row74b
-Scenario: Row #74b
+@row77b
+Scenario: Row #77b
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
