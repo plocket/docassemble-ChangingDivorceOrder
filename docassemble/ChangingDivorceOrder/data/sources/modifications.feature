@@ -100,8 +100,8 @@ Scenario: Row #27
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
 
-@row45
-Scenario: Row #45
+@row48
+Scenario: Row #48
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -124,8 +124,8 @@ Scenario: Row #45
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
 
-@row46
-Scenario: Row #46
+@row49
+Scenario: Row #49
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -145,8 +145,8 @@ Scenario: Row #46
   And I should see the phrase "Get more information or help"
   And I download "changing_divorce_order.pdf"
 
-@row67
-Scenario: Row #67
+@row70
+Scenario: Row #70
 Given I start the interview at "changing_divorce_order.yml"
 And I get to the question id "final screen" with this data:
     | var | value | trigger |
@@ -169,8 +169,8 @@ And I should see the phrase "What to expect after you file a Motion to Modify"
 And I should see the phrase "Get more information or help"
 And I download "changing_divorce_order.pdf"
 
-@row68
-Scenario: Row #68
+@row71
+Scenario: Row #71
   Given I start the interview at "changing_divorce_order.yml"
   And I get to the question id "final screen" with this data:
     | var | value | trigger |
