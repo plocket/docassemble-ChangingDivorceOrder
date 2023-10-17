@@ -231,7 +231,7 @@ code: |
           motion_type = 'Motion to Modify'
 
                
-    # Rows 28 - 29, 47-48 & 69-70
+      # Rows 28 - 29, 47-48 & 69-70
       if ((type_of_final_order['custody order'] \
         and why_change == 'problem') \
         or (type_of_final_order.any_true('property or debt','spousal support') \
@@ -251,9 +251,9 @@ code: |
       #    add_unique_step((serve_step, "serve_idx"))
       #    add_unique_step((expect_reconsider_step, "expect_reconsider_idx"))
 
-    # and type_of_final_order.any_true('property or debt','spousal support') \
-    # and why_change_divorce_order == 'problem' \    
-    # Rows 30 - 31, 49-50 & 71-72
+      # and type_of_final_order.any_true('property or debt','spousal support') \
+      # and why_change_divorce_order == 'problem' \    
+      # Rows 30 - 31, 49-50 & 71-72
       if type_of_final_order['custody order'] \
         and why_change == 'problem' \
         and final_order_date_within_15_days:
@@ -267,9 +267,9 @@ code: |
             motion_type = 'Motion to Set Aside'
           file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
           
-    # Rows 32 - 33, 51-52 & 73-74
-    # and type_of_final_order.any_true('property or debt','spousal support')
-    # and why_change_divorce_order == 'problem'
+      # Rows 32 - 33, 51-52 & 73-74
+      # and type_of_final_order.any_true('property or debt','spousal support')
+      # and why_change_divorce_order == 'problem'
       if type_of_final_order['custody order'] \
         and why_change == 'problem' \
         and not final_order_date_within_10_days \
@@ -285,7 +285,7 @@ code: |
               motion_type = 'Motion to Set Aside'
             file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
           
-    # Rows 98-99
+      # Rows 98-99
       if type_of_final_order['custody order'] \
         and why_change in('review','schedule') \
         and type_of_final_order.any_true('property or debt','spousal support') \
@@ -305,7 +305,7 @@ code: |
           
     
     
-    # Rows 24-27
+      # Rows 24-27
       if type_of_final_order['custody order'] \
         and why_change in('review','schedule') \
         and type_of_final_order.any_true('property or debt','spousal support') \
@@ -318,7 +318,7 @@ code: |
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
           file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
           
-    # Rows 24-27
+      # Rows 24-27
       if type_of_final_order['custody order'] \
         and why_change in('review','schedule') \
         and type_of_final_order.any_true('property or debt','spousal support') \
@@ -333,20 +333,20 @@ code: |
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
           file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
 
-      if type_of_final_order.all_true('custody', exclusive = True) \
-        and why_change == 'problem' \
-        and defined('final_order_period') \
-        and guess_final_order_date == 'unknown' \
-        and unknown_final_date.all_true('appeal', exclusive=True):
-          log('appeal and custody problem', "console")
-          add_unique_step((get_help, "get_help_idx"), step_list)
-          for iter_idx, step_tuple in enumerate( step_list ):
-            define(step_tuple[ 1 ], iter_idx + 1)
-          get_steps = True
+      # if type_of_final_order.all_true('custody order', exclusive = True) \
+      #   and why_change == 'problem' \
+      #   and defined('final_order_period') \
+      #   and guess_final_order_date == 'unknown' \
+      #   and unknown_final_date.all_true('appeal', exclusive=True):
+      #   log('appeal and custody problem', "console")
+      #   # add_unique_step((get_help, "get_help_idx"), step_list)
+      #   # for iter_idx, step_tuple in enumerate( step_list ):
+      #   #   define(step_tuple[ 1 ], iter_idx + 1)
+      #   # get_steps = True
 
 
 
-    # Rows 47, 48 & 69, 70, 100
+      # Rows 47, 48 & 69, 70, 100
       if type_of_final_order.any_true('property or debt', 'spousal support', exclusive=True) \
         and why_change_divorce_order == 'problem' \
         and final_order_date_within_30_days:
@@ -365,7 +365,7 @@ code: |
         file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
         
 
-    # Rows 51, 52 & 73, 74, 102 
+      # Rows 51, 52 & 73, 74, 102 
       if type_of_final_order.any_true('property or debt', 'spousal support', exclusive=True) \
         and why_change_divorce_order == 'problem' \
         and not final_order_date_within_10_days \
@@ -385,7 +385,7 @@ code: |
           motion_type = 'Motion to Set Aside'
         file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
         
-            
+      #####trying to get appeal only to work SKIPPING steps for cert of serv, file, serve and expect.
       if defined('final_order_period') \
           and guess_final_order_date == 'unknown':
             log('date unknown', 'console')
@@ -420,8 +420,8 @@ code: |
                 elif not unknown_final_date['reconsider']:
                   file_step_heading = 'File your Motion to Set Aside'
                   motion_type = 'Motion to Set Aside'
-            #  if unknown_final_date['reconsider']:
-            #    add_unique_step((expect_reconsider_step, "expect_reconsider_idx"))
+              # if unknown_final_date['reconsider']:
+              #   add_unique_step((expect_reconsider_step, "expect_reconsider_idx"))
               if unknown_final_date['set aside']:
                 file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
    
@@ -453,16 +453,17 @@ code: |
           else:
             images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Reconsider and the Motion to Set Aside."})
             file_step_heading = 'File your motion forms'
-          add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-          add_unique_step((file_step, "file_idx"), step_list)
-          add_unique_step((serve_step, "serve_idx"), step_list)
+          if not (unknown_final_date.all_true('appeal', exclusive=True) and (type_of_final_order.all_true('custody order', exclusive = True) and why_change == 'problem') or (type_of_final_order.all_false('custody order', exclusive = True) and why_change_divorce_order == 'problem') or (type_of_final_order['custody order'] and why_change == 'problem' and type_of_final_order.any_true('property or debt','spousal support') and why_change_divorce_order == 'problem')):
+            add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
+            add_unique_step((file_step, "file_idx"), step_list)
+            add_unique_step((serve_step, "serve_idx"), step_list)
           if (type_of_final_order['custody order'] \
             and why_change in('review','schedule'))\
             or (type_of_final_order.any_true('property or debt','spousal support') \
             and why_change_divorce_order == 'changed circumstances'):
             if not unknown_final_date['set aside']:
               motion_type = 'Motion to Modify'
-            # add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+              # add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
           if unknown_final_date['reconsider']:
             add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
           if unknown_final_date['set aside']:
@@ -470,49 +471,80 @@ code: |
             motion_type = 'Motion to Set Aside'
             add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
       
-      if (type_of_final_order['custody order'] \
-        and why_change in('review','schedule') \
-        and type_of_final_order.any_true('property or debt','spousal support') \
-        and why_change_divorce_order == 'problem')\
-        or (type_of_final_order.any_true('property or debt','spousal support') \
-        and why_change_divorce_order == 'changed circumstances' \
-        and type_of_final_order['custody order'] \
-        and why_change in('problem')):
-          log('steps', "console")
-          if (defined('final_order_date_within_10_days') and final_order_date_within_10_days) \
-            or (defined('final_order_period') and guess_final_order_date == 'unknown' \
-            and unknown_final_date.any_true('reconsider', 'set aside')):
-            file_step_heading = 'File your motion forms'
-          if defined('final_order_period') and guess_final_order_date == 'unknown' \
-            and unknown_final_date['set aside']:
-            motion_type = 'motion'
-          else:
-            file_step_heading = 'File your Motion to Modify'
-            motion_type = 'Motion to Modify'
-      add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-      add_unique_step((file_step, "file_idx"), step_list)
-      add_unique_step((serve_step, "serve_idx"), step_list)
-          
-          # add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+      # if (type_of_final_order['custody order'] \
+      #   and why_change in('review','schedule') \
+      #   and type_of_final_order.any_true('property or debt','spousal support') \
+      #   and why_change_divorce_order == 'problem')\
+      #   or (type_of_final_order.any_true('property or debt','spousal support') \
+      #   and why_change_divorce_order == 'changed circumstances' \
+      #   and type_of_final_order['custody order'] \
+      #   and why_change in('problem')):
+      #     log('steps', "console")
+      #     if (defined('final_order_date_within_10_days') and final_order_date_within_10_days) \
+      #       or (defined('final_order_period') and guess_final_order_date == 'unknown' \
+      #       and unknown_final_date.any_true('reconsider', 'set aside')):
+      #       file_step_heading = 'File your motion forms'
+      #     if defined('final_order_period') and guess_final_order_date == 'unknown' \
+      #       and unknown_final_date['set aside']:
+      #       motion_type = 'motion'
+      #     else:
+      #       file_step_heading = 'File your Motion to Modify'
+      #       motion_type = 'Motion to Modify'
+      
+      if not (
+        (
+          type_of_final_order.all_true('custody order', exclusive = True) \
+          and why_change == 'problem'
+        ) or (
+          type_of_final_order.all_false('custody order', exclusive = True) \
+          and why_change_divorce_order == 'problem'
+        ) or (
+          type_of_final_order['custody order'] \
+          and why_change == 'problem' \
+          and type_of_final_order.any_true('property or debt','spousal support') \
+          and why_change_divorce_order == 'problem'
+        )
+      ):
+        add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
+        add_unique_step((file_step, "file_idx"), step_list)
+        add_unique_step((serve_step, "serve_idx"), step_list)
+        # add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
 
 
       #  add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
       #  add_unique_step((file_step, "file_idx"), step_list)
       #  add_unique_step((serve_step, "serve_idx"), step_list)
-      if defined('final_order_date_within_10_days') and final_order_date_within_10_days \
-        or (defined('final_order_period') \
-        and guess_final_order_date == 'unknown' \
-        and unknown_final_date['reconsider']):
+      if defined('final_order_date_within_10_days') \
+        and final_order_date_within_10_days \
+        or (
+          defined('final_order_period') \
+          and guess_final_order_date == 'unknown' \
+          and unknown_final_date['reconsider']
+        ):
         if (type_of_final_order['custody order'] \
             and why_change in('review','schedule'))\
-            or (type_of_final_order.any_true('property or debt','spousal support') \
+          or (type_of_final_order.any_true('property or debt','spousal support') \
             and why_change_divorce_order == 'changed circumstances'):
-            motion_type = 'Motion to Modify'
-            add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+              motion_type = 'Motion to Modify'
+              add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
         add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
       else:
-        log('expect', "console")
-        add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+        if not (
+          (
+            type_of_final_order.all_true('custody order', exclusive = True) \
+            and why_change == 'problem'
+          ) or (
+            type_of_final_order.all_false('custody order', exclusive = True) \
+            and why_change_divorce_order == 'problem'
+          ) or (
+            type_of_final_order['custody order'] \
+            and why_change == 'problem' \
+            and type_of_final_order.any_true('property or debt','spousal support') \
+            and why_change_divorce_order == 'problem'
+          )
+        ):
+          log('expect', "console")
+          add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
     
   add_unique_step((get_help, "get_help_idx"), step_list)
     
@@ -640,11 +672,11 @@ Comment: |
 template: fill_modify_divorce_step
 subject: |
   Step ${ fill_modify_divorce_idx }: Fill out the motion forms to modify
-  % if type_of_final_order.all_true('property or debt', 'spousal support', exclusive = True):
+  % if type_of_final_order.all_true('property or debt', 'spousal support'):
   the property and debt division and spousal support orders
-  % elif type_of_final_order.all_true('property or debt', exclusive = True):
+  % elif type_of_final_order['property or debt']:
   the property and debt division order
-  % elif type_of_final_order.any_true('spousal support', exclusive = True):
+  % elif type_of_final_order['spousal support']:
   the spousal support order
   % endif
   
