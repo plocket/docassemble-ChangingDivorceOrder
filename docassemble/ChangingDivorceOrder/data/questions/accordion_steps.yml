@@ -333,6 +333,19 @@ code: |
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
           file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
 
+      if type_of_final_order.all_true('custody', exclusive = True) \
+        and why_change == 'problem' \
+        and defined('final_order_period') \
+        and guess_final_order_date == 'unknown' \
+        and unknown_final_date.all_true('appeal', exclusive=True):
+          log('appeal and custody problem', "console")
+          add_unique_step((get_help, "get_help_idx"), step_list)
+          for iter_idx, step_tuple in enumerate( step_list ):
+            define(step_tuple[ 1 ], iter_idx + 1)
+          get_steps = True
+
+
+
     # Rows 47, 48 & 69, 70, 100
       if type_of_final_order.any_true('property or debt', 'spousal support', exclusive=True) \
         and why_change_divorce_order == 'problem' \
@@ -415,15 +428,7 @@ code: |
       #and (not defined('final_order_period') \
       #       or (defined('final_order_period') and guess_final_order_date != 'unknown')):
       
-      if type_of_final_order.all_true('custody', exclusive = True) \
-        and why_change == 'problem' \
-        and defined('final_order_period') \
-        and guess_final_order_date == 'unknown' \
-        and unknown_final_date.all_true('appeal', exclusive=True):
-          add_unique_step((get_help, "get_help_idx"), step_list)
-          for iter_idx, step_tuple in enumerate( step_list ):
-            define(step_tuple[ 1 ], iter_idx + 1)
-          get_steps = True
+      
           
       #if type_of_final_order.any_true('property or debt','spousal support', exclusive = True) \
       #  and why_change_divorce_order == 'problem' \
@@ -484,9 +489,9 @@ code: |
           else:
             file_step_heading = 'File your Motion to Modify'
             motion_type = 'Motion to Modify'
-          add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-          add_unique_step((file_step, "file_idx"), step_list)
-          add_unique_step((serve_step, "serve_idx"), step_list)
+      add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
+      add_unique_step((file_step, "file_idx"), step_list)
+      add_unique_step((serve_step, "serve_idx"), step_list)
           
           # add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
 
