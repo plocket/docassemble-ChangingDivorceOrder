@@ -438,10 +438,12 @@ code: |
       
       if defined('final_order_period') \
         and guess_final_order_date == 'unknown':     
-          if unknown_final_date.all_true('reconsider', exclusive=True):
+          if unknown_final_date.all_true('reconsider', exclusive=True) \
+            or unknown_final_date.all_true('appeal','reconsider', exclusive=True):
             images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Reconsider"})
             file_step_heading = 'File your Motion to Reconsider'
-          elif unknown_final_date.all_true('set aside', exclusive=True):
+          elif unknown_final_date.all_true('set aside', exclusive=True) \
+            or unknown_final_date.all_true('appeal','set aside', exclusive=True):
             file_step_heading = 'File your Motion to Set Aside'
           else:
             images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Reconsider and the Motion to Set Aside."})
@@ -455,10 +457,12 @@ code: |
             and why_change_divorce_order == 'changed circumstances'):
             if not unknown_final_date['set aside']:
               motion_type = 'Motion to Modify'
-            add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+            # add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
           if unknown_final_date['reconsider']:
             add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
           if unknown_final_date['set aside']:
+            log('unknown date set aside', "console")
+            motion_type = 'Motion to Set Aside'
             add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
       
       if (type_of_final_order['custody order'] \
@@ -474,7 +478,7 @@ code: |
             or (defined('final_order_period') and guess_final_order_date == 'unknown' \
             and unknown_final_date.any_true('reconsider', 'set aside')):
             file_step_heading = 'File your motion forms'
-          elif defined('final_order_period') and guess_final_order_date == 'unknown' \
+          if defined('final_order_period') and guess_final_order_date == 'unknown' \
             and unknown_final_date['set aside']:
             motion_type = 'motion'
           else:
@@ -566,7 +570,7 @@ subject: |
   % if type_of_final_order.all_true('property or debt', 'spousal support'):
    and 
   % endif
-  % if type_of_final_order.all_true('spousal support'):
+  % if type_of_final_order['spousal support']:
   Spousal Support
   % endif
 content: |
@@ -631,9 +635,9 @@ Comment: |
 template: fill_modify_divorce_step
 subject: |
   Step ${ fill_modify_divorce_idx }: Fill out the motion forms to modify
-  % if type_of_final_order.all_true('property or debt', 'spousal support'):
+  % if type_of_final_order.all_true('property or debt', 'spousal support', exclusive = True):
   the property and debt division and spousal support orders
-  % elif type_of_final_order.any_true('property or debt', exclusive = True):
+  % elif type_of_final_order.all_true('property or debt', exclusive = True):
   the property and debt division order
   % elif type_of_final_order.any_true('spousal support', exclusive = True):
   the spousal support order
