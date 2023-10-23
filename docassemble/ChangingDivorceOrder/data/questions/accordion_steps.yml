@@ -302,7 +302,7 @@ code: |
           add_unique_step((learn_reconsider_step, "learn_reconsider_idx"), step_list)
           add_unique_step((fill_reconsider_step, "fill_reconsider_idx"), step_list)
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
-          file_step_heading = 'File your motions'
+          file_step_heading = 'File your motion forms'
           motion_type = 'Motion to Modify'
           log('--double: modify custody', "console")
           
