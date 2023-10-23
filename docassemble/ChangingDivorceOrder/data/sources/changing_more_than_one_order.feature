@@ -532,10 +532,11 @@ Scenario: Row #142
     | final_order_date | today - 17 |  |
     | parents_agree | True |  |
   And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
+    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your ex agree"
     And I should see the phrase "Tell the court about your agreement"
+    And I should see the phrase "Decide if you want to file an appeal"
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service" 

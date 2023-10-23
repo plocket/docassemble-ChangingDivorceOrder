@@ -1,14 +1,10 @@
-  # Applying 1st half Jonathan's fix from Slack for fixing ParserError: String does not contain a date:" https://docassemble.slack.com/archives/C7791ATUJ/p1697586638351249 I did not "remove disable if: final_order_period" yet
-
 include:
   - docassemble.AssemblyLine:assembly_line.yml
   - docassemble.AKA2JBranding:custom_organization.yml  
   - docassemble.AKA2JBranding:aka2j_templates.yml    
   - docassemble.AKA2JBranding:aka2j_motion_response_templates.yml    
   - docassemble.AKA2JBranding:aka2j_mod_cust_div_templates.yml
-  # - accordion_steps_formatted_with_headings_section2.yml
-  # - accordion_steps.yml
-  - accordion_steps_before_formatting_w_headings.yml
+  - accordion_steps.yml
 ---
 metadata:
   title: |
@@ -365,7 +361,7 @@ fields:
     datatype: date
     max: ${ today() }
     required: False
-    disable if: final_order_period
+    # disable if: final_order_period
     help: |
       This is the date in the box at the bottom of the last page of your order.
   - "I do not have the exact date": final_order_period
@@ -394,7 +390,10 @@ fields:
 continue button field: final_order_date_question
 ---
 code: |
-  if type_of_final_order['custody order'] and why_change == 'problem':
+  if (type_of_final_order.all_true('custody order', exclusive=True) and why_change == 'problem') \
+    or (type_of_final_order.any_true('property or debt', 'spousal support') \
+        and why_change_divorce_order == 'changed circumstances' \
+        and type_of_final_order['custody order'] and why_change == 'problem'):
     final_order_date_options = [
       {'within 10 days': "It was in the last 10 days."},
       {'within 15 days': "It was more than 10 days ago, but within the last 15 days."},
