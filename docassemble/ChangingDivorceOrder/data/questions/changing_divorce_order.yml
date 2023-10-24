@@ -44,7 +44,7 @@ code: |
   AL_DEFAULT_STATE = "AK"
 ---
 code: |
-  github_repo_name =  'docassemble-ChangingChildCustodyIssues'
+  github_repo_name =  'docassemble-ChangingDivorceOrderInterviewIssues'
 ---
 code: |
   interview_short_title = "Get a Personal Action Plan for changing your custody or Parenting Plan order"
