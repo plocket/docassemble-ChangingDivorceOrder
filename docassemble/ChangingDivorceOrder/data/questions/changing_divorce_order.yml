@@ -192,6 +192,7 @@ fields:
   - "The date of the interim order is": interim_order_date
     datatype: date  
     max: ${ today() }
+    required: False
     # disable if: interim_order_period
     help: |
       This is the date in the box at the bottom of your order.
