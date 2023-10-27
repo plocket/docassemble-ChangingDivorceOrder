@@ -54,6 +54,7 @@ code: |
 ---
 objects:
   - users: ALPeopleList.using(ask_number=True,target_number=1)
+  - service_cert_modify_spousal_support_property_image: DAStaticFile.using(filename = 'certofservice_req_mod_prop_debt_spous_support_dr_735.png', alt_text="Certificate of Service box")
 ---
 # sections:
 #  - review_changing_divorce_order: Review your answers
@@ -671,12 +672,13 @@ id: Add response to modify to your Action Plan
 question: |
   What information would you like added to your Action Plan?
 subquestion: |
-  % if type_of_response in('custody','all_divorce'):
+  % if type_of_response == 'custody':
   If a parent files a **Motion to Modify Custody**, the judge first decides if there has been a change in circumstances.  If there is a change, the judge will order a new Parenting Plan in the children's best interest.
   
-  When you respond to the **Motion to Modify**, state if you agree with all, some, or none of the other parent’s requested changes your spouse or ex asks for in their motion
-  % else:
-  When you respond to the **Motion to Modify**, state if you agree with all, some, or none of the changes your spouse or ex asks for in their motion.
+  When you respond to the **Motion to Modify**, state if you agree with all, some, or none of the changes the other parent asks for in their motion.
+  % endif
+  % if type_of_response in('divorce','all_divorce'):
+  When you respond to the **Request to Modify**, state if you agree with all, some, or none of the changes your spouse or ex asks for in their motion.
   % endif
   
   What information do you need?
@@ -916,4 +918,4 @@ attachment:
   filename: changing_divorce_order
   variable name: changing_divorce_order_attachment[i]
   skip undefined: True
-  docx template file: dummy.docx
+  docx template file: changing_divorce_order_action_plan.docx
