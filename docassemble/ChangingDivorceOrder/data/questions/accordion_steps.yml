@@ -250,7 +250,7 @@ code: |
             or (type_of_final_order.any_true('property or debt','spousal support') \
             and why_change_divorce_order == 'changed circumstances'):
               file_step_heading = 'File your motion forms'
-              images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
+              # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
           else:
               file_step_heading = 'File your Motion to Reconsider'
       #    add_unique_step((file_step, "file_idx"))
@@ -462,7 +462,7 @@ code: |
               (type_of_final_order.any_true('property or debt','spousal support') \
                 and why_change_divorce_order == 'changed circumstances')
             ):
-            images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
+            # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
             file_step_heading = 'File your motion forms'
             if unknown_final_date['set aside']:
               motion_type = 'motion'
@@ -481,7 +481,7 @@ code: |
                 and why_change_divorce_order == 'changed circumstances')
               )
           ):
-            images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
+            # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
             log('date unknown not modify', "console")
             if unknown_final_date.all_true('reconsider', exclusive=True) \
               or unknown_final_date.all_true('appeal','reconsider', exclusive=True):
