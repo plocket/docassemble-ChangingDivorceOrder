@@ -1,3 +1,9 @@
+comment: |
+  2024-01-02 after testing, replace  
+  ${ al_user_bundle.download_list_html() }
+  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() }) 
+  with
+  ${ download_buttons_html(al_user_bundle) }
 id: final screen
 decoration: pen-to-square
 event: confirmation_and_download
@@ -27,7 +33,9 @@ subquestion: |
   ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
   % endfor
   
-  ${ download_buttons_html(al_user_bundle) }
+  
+  ${ al_user_bundle.download_list_html() }
+  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
   
 buttons:
   - Start over: restart
