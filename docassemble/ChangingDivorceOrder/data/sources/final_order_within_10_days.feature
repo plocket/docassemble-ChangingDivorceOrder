@@ -260,14 +260,23 @@ Scenario: Row #73
     | parents_agree | False |  |
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
-    And I should see the phrase "Learn about Motions to Reconsider"
-    And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I should see the phrase "Fill out the Certificate of Service" 
-    And I should see the phrase "File your Motion to Reconsider"
-    And I should see the phrase "Serve your ex" 
+  And I should see the phrase "Learn about Motions to Reconsider"
+  And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
+  And I should see the phrase "Fill out the Motion to Reconsider forms"
+  And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
+  And I should see the phrase "Fill out the Certificate of Service"
+  And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
+  And I should see the phrase "File your Motion to Reconsider"
+  And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
+  And I should see the phrase "Serve your ex"
+    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-  And I should see the phrase "Get more information or help"
-  And I download "changing_divorce_order.pdf"
+    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
+    And I should see the phrase "Get more information or help"
+    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
+    And I take a screenshot
+    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row73b
 Scenario: Row #73b
@@ -283,12 +292,21 @@ Scenario: Row #73b
     | parents_agree | False |  |
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
-    And I should see the phrase "Learn about Motions to Reconsider"
-    And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I should see the phrase "Fill out the Certificate of Service" 
-    And I should see the phrase "File your Motion to Reconsider"
-    And I should see the phrase "Serve your ex" 
-    And I should see the phrase "What to expect after you file a Motion to Reconsider"
+  And I should see the phrase "Learn about Motions to Reconsider"
+  And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
+  And I should see the phrase "Fill out the Motion to Reconsider forms"
+  And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
+  And I should see the phrase "Fill out the Certificate of Service"
+  And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
+  And I should see the phrase "File your Motion to Reconsider"
+  And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
+  And I should see the phrase "Serve your ex"
+  And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
+  And I should see the phrase "What to expect after you file a Motion to Reconsider"
+  And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
   And I should see the phrase "Get more information or help"
-  And I download "changing_divorce_order.pdf"
+  And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
+  And I take a screenshot
+  # And I download "changing_divorce_order.pdf"
+  And I download "changing_divorce_order.docx"
  
