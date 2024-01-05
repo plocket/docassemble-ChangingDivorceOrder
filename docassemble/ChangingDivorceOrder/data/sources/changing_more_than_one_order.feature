@@ -747,7 +747,7 @@ Scenario: Row #140
     And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
     And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
-    And I should see the phrase "File your motion forms"
+    And I should see the phrase "File your Motion to Set Aside"
     And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
     And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
@@ -789,7 +789,7 @@ Scenario: Row #142
     And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
     And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
-    And I should see the phrase "File your motion forms"
+    And I should see the phrase "File your Motion to Set Aside"
     And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
     And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
