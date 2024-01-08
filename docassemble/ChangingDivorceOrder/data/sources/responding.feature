@@ -146,7 +146,7 @@ Scenario: Row #12
     And I should see the phrase "Contact your ex, and write out your agreement"
     And I tap the "#Y29udGFjdF9vdGhlcl9wYXJ0eV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
-    And I tap the "#Y29udGFjdF9vdGhlcl9wYXJ0eV9zdGVw .al_toggle" element and stay on the same page
+    And I tap the "#ZmlsZV9hZ3JlZW1lbnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
     And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
