@@ -217,6 +217,11 @@ code: |
         add_unique_step((parents_agree_step, "parents_agree_idx"), step_list)
         add_unique_step((tell_the_court_step, "tell_the_court_idx"), step_list)
       
+      if defined('final_order_period') \
+        and guess_final_order_date == 'unknown':
+          if unknown_final_date.all_true('reconsider', 'appeal') or unknown_final_date.all_true('reconsider', 'set aside') or unknown_final_date.all_true('appeal', 'set aside') or unknown_final_date.all_true('reconsider', 'appeal', 'set aside'):
+            add_unique_step((pick_a_step_step, "pick_a_step_idx"), step_list)
+      
       # Rows 24-27
       if type_of_final_order['custody order'] \
         and why_change in('review', 'schedule'):
@@ -258,6 +263,7 @@ code: |
             or (type_of_final_order.any_true('property or debt','spousal support') \
             and why_change_divorce_order == 'changed circumstances'):
               file_step_heading = 'File your motion forms'
+              file_motion_to_set_aside = ''
               # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
           else:
               file_step_heading = 'File your Motion to Reconsider'
@@ -315,6 +321,7 @@ code: |
           add_unique_step((fill_reconsider_step, "fill_reconsider_idx"), step_list)
           images_list.append({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."})
           file_step_heading = 'File your motion forms'
+          file_motion_to_set_aside = ''
           motion_type = 'Motion to Modify'
           log('--double: modify custody', "console")
           
@@ -373,6 +380,7 @@ code: |
         if (type_of_final_order['custody order'] \
                 and why_change in('review','schedule')):
           file_step_heading = 'File your motion forms'
+          file_motion_to_set_aside = ''
           motion_type = 'motion'
         else:
           file_step_heading = 'File your Motion to Set Aside'
@@ -394,6 +402,7 @@ code: |
         if (type_of_final_order['custody order'] \
                 and why_change in('review','schedule')):
           file_step_heading = 'File your motion forms'
+          file_motion_to_set_aside = ''
           motion_type = 'motion'
         else:
           file_step_heading = 'File your Motion to Set Aside'
@@ -436,8 +445,8 @@ code: |
       #####trying to get appeal only to work SKIPPING steps for cert of serv, file, serve and expect.
       if defined('final_order_period') \
         and guess_final_order_date == 'unknown':
-          if unknown_final_date.all_true('reconsider', 'appeal') or unknown_final_date.all_true('reconsider', 'set aside') or unknown_final_date.all_true('appeal', 'set aside') or unknown_final_date.all_true('reconsider', 'appeal', 'set aside'):
-            add_unique_step((pick_a_step_step, "pick_a_step_idx"), step_list)
+          # if unknown_final_date.all_true('reconsider', 'appeal') or unknown_final_date.all_true('reconsider', 'set aside') or unknown_final_date.all_true('appeal', 'set aside') or unknown_final_date.all_true('reconsider', 'appeal', 'set aside'):
+          #  add_unique_step((pick_a_step_step, "pick_a_step_idx"), step_list)
           if unknown_final_date['reconsider']:
             log('date unknown reconsider', 'console')
             add_unique_step((learn_reconsider_step, "learn_reconsider_idx"), step_list)
@@ -474,6 +483,7 @@ code: |
             ):
             # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
             file_step_heading = 'File your motion forms'
+            file_motion_to_set_aside = ''
             if unknown_final_date['set aside']:
               motion_type = 'motion'
             else:
@@ -503,6 +513,7 @@ code: |
             if unknown_final_date.all_true('reconsider','set aside') \
               or unknown_final_date.all_true('reconsider','appeal','set aside'):
                 file_step_heading = 'File your motion forms'
+                file_motion_to_set_aside = ''
                 if not (
                   (type_of_final_order['custody order'] \
                     and why_change in('review','schedule')) \
@@ -550,10 +561,10 @@ code: |
             add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
             add_unique_step((file_step, "file_idx"), step_list)
             add_unique_step((serve_step, "serve_idx"), step_list)
-          if unknown_final_date['reconsider']:
-            add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
           if unknown_final_date['set aside']:
             add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+          if unknown_final_date['reconsider']:
+            add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
       
       # if (type_of_final_order['custody order'] \
       #   and why_change in('review','schedule') \

@@ -61,6 +61,7 @@ Scenario: Row #95
     | parents_agree | False |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
+    And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
     And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
@@ -453,7 +454,9 @@ Scenario: Row #112
     | unknown_final_date['appeal'] | False |  |
     | unknown_final_date['set aside'] | True |  |
   And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 14 steps"
+    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 15 steps"
+    And I should see the phrase "Decide the steps you want to take"
+    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
@@ -551,7 +554,9 @@ Scenario: Row #115
     | unknown_final_date['appeal'] | True |  |
     | unknown_final_date['set aside'] | True |  |
   And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 12 steps"
+    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 13 steps"
+    And I should see the phrase "Decide the steps you want to take"
+    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
@@ -566,7 +571,6 @@ Scenario: Row #115
     And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
-  
     And I should see the phrase "Fill out the Certificate of Service"
     And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
@@ -601,7 +605,9 @@ Scenario: Row #117
     | unknown_final_date['appeal'] | True |  |
     | unknown_final_date['set aside'] | True |  |
   And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 15 steps"
+    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 16 steps"
+    And I should see the phrase "Decide the steps you want to take"
+    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
