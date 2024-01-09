@@ -217,7 +217,7 @@ Scenario: Row #39 reconsider and set aside
     | unknown_final_date['appeal'] | False |  |
     | unknown_final_date['set aside'] | True |  |
   And I take a screenshot
-  And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 13 steps"  
+  And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 13 steps"
   And I should see the phrase "Decide the steps you want to take"
   And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
   And I should see the phrase "Find out if you and the other parent agree"
@@ -228,7 +228,7 @@ Scenario: Row #39 reconsider and set aside
   And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
   And I should see the phrase "Fill out the Motion to Reconsider forms"
   And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
-  And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order" 
+  And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
   And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
