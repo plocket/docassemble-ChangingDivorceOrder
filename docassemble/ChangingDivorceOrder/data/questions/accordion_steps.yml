@@ -806,7 +806,7 @@ Comment: |
 ---
 template: fill_modify_divorce_step
 subject: |
-  Step ${ fill_modify_divorce_idx }: Fill out the motion forms to modify
+  Step ${ fill_modify_divorce_idx }: Fill out the motion form to modify
   % if type_of_final_order.all_true('property or debt', 'spousal support'):
   the property and debt division and spousal support orders
   % elif type_of_final_order['property or debt']:
@@ -819,9 +819,8 @@ content: |
   <div class="step-subheading">Use</div>
   
   * Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation, [DR-735](https://public.courts.alaska.gov/web/forms/docs/dr-735.pdf) [Fill-In PDF]
-  Three of the forms in this packet are affidavits:
   
-  * Wait to sign them until you are in front of someone who has the power to take oaths, like a notary public.  
+  * Wait to sign the form until you are in front of someone who has the power to take oaths, like a notary public.  
   * The court clerk can do this for free.  
   * Bring a valid photo ID with you.  
   * If you cannot get to a notary public or someone who has the power to take oaths, you can "self-certify".  Use: **Self-Certification (No Notary Available)** [TF-835](https://public.courts.alaska.gov/web/forms/docs/tf-835.pdf) [Fill-In PDF]

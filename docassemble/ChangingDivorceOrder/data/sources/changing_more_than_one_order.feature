@@ -15,7 +15,7 @@ Scenario: Row #92
     | parents_agree | True |  |
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 14 steps"
-    And I should see the phrase "Decide the steps you want to take"
+    And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
     And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
@@ -31,7 +31,7 @@ Scenario: Row #92
     And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Modify Spousal Support"
     And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "Fill out the motion forms to modify the spousal support order"
+    And I should see the phrase "Fill out the motion form to modify the spousal support order"
     And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
     And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
@@ -71,7 +71,7 @@ Scenario: Row #95
     And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
     And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "Fill out the motion forms to modify the property and debt division order"
+    And I should see the phrase "Fill out the motion form to modify the property and debt division order"
     And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
     And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
@@ -113,7 +113,7 @@ Scenario: Row #97
     And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
     And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "Fill out the motion forms to modify the property and debt division and spousal support orders"
+    And I should see the phrase "Fill out the motion form to modify the property and debt division and spousal support orders"
     And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
     And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
@@ -659,7 +659,7 @@ Scenario: Row #118
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
     And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "Fill out the motion forms to modify the property and debt division order"
+    And I should see the phrase "Fill out the motion form to modify the property and debt division order"
     And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
     And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
