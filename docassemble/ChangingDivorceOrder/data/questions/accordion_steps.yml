@@ -32,7 +32,7 @@ subquestion: |
   % endif
   % endif
   % for iteration_index, step_tuple in enumerate( step_list ):
-  ### ${ step_tuple[0].subject }
+  <h3> ${ step_tuple[0].subject } </h3>
   ${ step_tuple[0].content }
   % endfor
   
