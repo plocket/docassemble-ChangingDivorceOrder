@@ -4,8 +4,6 @@ comment: |
   [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() }) 
   with
   ${ download_buttons_html(al_user_bundle) }
-  2024-01-15
-  l. 33 ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
 id: final screen
 decoration: pen-to-square
 event: confirmation_and_download
@@ -32,8 +30,7 @@ subquestion: |
   % endif
   % endif
   % for iteration_index, step_tuple in enumerate( step_list ):
-  <h3> ${ step_tuple[0].subject } </h3>
-  ${ step_tuple[0].content }
+  ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
   % endfor
   
   
@@ -812,7 +809,7 @@ Comment: |
 ---
 template: fill_modify_divorce_step
 subject: |
-  Step ${ fill_modify_divorce_idx }: Fill out the motion form to modify 
+  Step ${ fill_modify_divorce_idx }: Fill out the motion form to modify
   % if type_of_final_order.all_true('property or debt', 'spousal support'):
   the property and debt division and spousal support orders
   % elif type_of_final_order['property or debt']:
