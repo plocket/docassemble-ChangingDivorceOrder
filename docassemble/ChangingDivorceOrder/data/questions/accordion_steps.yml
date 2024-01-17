@@ -39,7 +39,7 @@ subquestion: |
   
 buttons:
   - Start over: restart
-js: |
+script: |
   <script>
     Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className += " show" })
   </script>
