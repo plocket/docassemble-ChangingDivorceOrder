@@ -217,6 +217,12 @@ code: |
         other_party_in_case = 'the other parent'
       else:
         other_party_in_case = 'your ex'
+        
+      if (type_of_final_order.any_true('property or debt', 'spousal support') \
+          and why_change_divorce_order == 'changed circumstances') \
+        or (type_of_final_order['custody order'] \
+          and why_change in('review', 'schedule')):
+        file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
       
       if parents_agree:
         add_unique_step((pick_a_step_step, "pick_a_step_idx"), step_list)
@@ -238,7 +244,7 @@ code: |
         images_list.append({'image': service_cert_modify_image, 'text': "Certificate of Service at the bottom of a Motion to Modify."})
         if type_of_final_order.all_true('custody order', exclusive = True):
           file_step_heading = 'File your Modify Custody, Visitation & Support Packet'
-          file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
+          # file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
           motion_type = 'Motion to Modify'
           log('--simple modify custody', "console")
         
@@ -250,7 +256,7 @@ code: |
         images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
         if not type_of_final_order['custody order']:
           file_step_heading = 'File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation'
-          file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
+          # file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
           motion_type = 'Motion to Modify'
           log('--simple modify divorce', "console")
 
@@ -329,7 +335,7 @@ code: |
           file_step_heading = 'File your motion forms'
           file_motion_to_set_aside = ''
           motion_type = 'Motion to Modify'
-          file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
+         # file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
           log('--double: modify custody', "console")
           
     
