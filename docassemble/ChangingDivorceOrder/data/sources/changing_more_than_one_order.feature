@@ -16,33 +16,19 @@ Scenario: Row #92
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 14 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Modify Spousal Support"
-    And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the motion form to modify the spousal support order"
-    And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -62,27 +48,16 @@ Scenario: Row #95
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
-    And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the motion form to modify the property and debt division order"
-    And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -104,27 +79,16 @@ Scenario: Row #97
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
-    And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the motion form to modify the property and debt division and spousal support orders"
-    And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -145,29 +109,18 @@ Scenario: Row #99
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 12 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
     And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page    
     And I should see the phrase "What to expect after you file a Motion to Modify"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -189,35 +142,20 @@ Scenario: Row #100
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 15 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Decide if you want to file an appeal"
-    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -238,33 +176,19 @@ Scenario: Row #102
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 14 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -290,35 +214,20 @@ Scenario: Row #104
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 15 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Modify"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -343,37 +252,22 @@ Scenario: Row #107
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 16 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Decide if you want to file an appeal"
-    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
     And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page    
     And I should see the phrase "What to expect after you file a Motion to Modify"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -399,39 +293,22 @@ Scenario: Row #109
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 17 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -456,35 +333,20 @@ Scenario: Row #112
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 15 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -510,27 +372,16 @@ Scenario: Row #113
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -556,31 +407,18 @@ Scenario: Row #115
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 13 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Decide if you want to file an appeal"
-    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -607,37 +445,21 @@ Scenario: Row #117
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 16 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
-    And I tap the "#bW9kaWZ5X3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
-    And I tap the "#ZmlsbF9tb2RpZnlfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out your child support forms"
-    And I tap the "#Y2FsY3VsYXRlX2NoaWxkX3N1cHBvcnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I tap the "#ZG9udF93YWl0X21vZGlmeV9jdXN0b2R5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Decide if you want to file an appeal"
-    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a motion"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -658,24 +480,14 @@ Scenario: Row #118
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
-    And I tap the "#bW9kaWZ5X2Rpdm9yY2Vfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the motion form to modify the property and debt division order"
-    And I tap the "#ZmlsbF9tb2RpZnlfZGl2b3JjZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service" 
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your motion forms"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -699,25 +511,15 @@ Scenario: Row #138
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about Motions to Reconsider"
-    And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Motion to Reconsider forms"
-    And I tap the "#ZmlsbF9yZWNvbnNpZGVyX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your Motion to Reconsider"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
-    And I tap the "#ZXhwZWN0X3JlY29uc2lkZXJfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -740,27 +542,16 @@ Scenario: Row #140
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Decide if you want to file an appeal"
-    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your Motion to Set Aside"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -779,30 +570,20 @@ Scenario: Row #142
     | type_of_final_order['spousal support'] | True |  |
     | why_change_divorce_order | problem |  |
     | final_order_date | today - 17 |  |
-    | parents_agree | True |  |And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
-    And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
-    And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "Decide if you want to file an appeal"
-    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
-    And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
-    And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
-    And I should see the phrase "File your Motion to Set Aside"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
-    And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
-    And I should see the phrase "What to expect after you file a Motion to Set Aside"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
-    And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
-    And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
-    And I download "changing_divorce_order.docx"
+    | parents_agree | True |  |
+  And I take a screenshot
+  And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
+  And I should see the phrase "Decide the steps you want to take"
+  And I should see the phrase "Find out if you and your ex agree"
+  And I should see the phrase "Tell the court about your agreement"
+  And I should see the phrase "Decide if you want to file an appeal"
+  And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
+  And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
+  And I should see the phrase "Fill out the Certificate of Service"
+  And I should see the phrase "File your Motion to Set Aside"
+  And I should see the phrase "Serve your ex"
+  And I should see the phrase "What to expect after you file a Motion to Set Aside"
+  And I should see the phrase "Get more information or help"
+  And I take a screenshot
+  # And I download "changing_divorce_order.pdf"
+  And I download "changing_divorce_order.docx"
