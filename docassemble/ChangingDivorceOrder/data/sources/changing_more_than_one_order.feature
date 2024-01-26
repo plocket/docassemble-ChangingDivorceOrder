@@ -83,7 +83,7 @@ Scenario: Row #97
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
     And I should see the phrase "Fill out your child support forms"
     And I should see the phrase "Do not wait to file your Motion to Modify"
-    And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
+    And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division and Spousal Support"
     And I should see the phrase "Fill out the motion form to modify the property and debt division and spousal support orders"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
