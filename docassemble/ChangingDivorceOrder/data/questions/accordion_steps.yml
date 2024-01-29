@@ -251,7 +251,6 @@ code: |
           file_step_heading = 'File your Modify Custody, Visitation & Support Packet'
           # file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
           motion_type = 'Motion to Modify'
-          log('--simple modify custody', "console")
         
       # Rows 48-49, 67-68 
       if type_of_final_order.any_true('property or debt', 'spousal support') \
