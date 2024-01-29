@@ -218,11 +218,16 @@ code: |
       else:
         other_party_in_case = 'your ex'
         
-      if (type_of_final_order.any_true('property or debt', 'spousal support') \
-          and why_change_divorce_order == 'changed circumstances') \
-        or (type_of_final_order['custody order'] \
-          and why_change in('review', 'schedule')):
-        file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
+      if (type_of_final_order['custody order'] \
+          and why_change in('review', 'schedule')) \
+        and (type_of_final_order.any_true('property or debt', 'spousal support') \
+          and why_change_divorce_order == 'changed circumstances'):
+        file_modify_filing_fee = '<li>Pay the $75 fee to file your Motions to Modify.</br>The court only charges one $75 fee as long as you file your Motions to Modify at the <strong>same time</strong>. If you file your Motions to Modify at different times, you must pay a $75 fee for each one.</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
+      elif (type_of_final_order['custody order'] \
+          and why_change in('review', 'schedule')) \
+        or (type_of_final_order.any_true('property or debt', 'spousal support') \
+          and why_change_divorce_order == 'changed circumstances'):
+        file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify.</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
       
       if parents_agree:
         add_unique_step((pick_a_step_step, "pick_a_step_idx"), step_list)
@@ -253,7 +258,7 @@ code: |
         and why_change_divorce_order == 'changed circumstances':
         add_unique_step((modify_divorce_step, "modify_divorce_idx"), step_list)
         add_unique_step((fill_modify_divorce_step, "fill_modify_divorce_idx"), step_list)
-        images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
+        images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation."})
         if not type_of_final_order['custody order']:
           file_step_heading = 'File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation'
           # file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
@@ -276,7 +281,7 @@ code: |
             and why_change_divorce_order == 'changed circumstances'):
               file_step_heading = 'File your motion forms'
               file_motion_to_set_aside = ''
-              # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
+              # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation."})
           else:
               file_step_heading = 'File your Motion to Reconsider'
       #    add_unique_step((file_step, "file_idx"))
@@ -494,7 +499,7 @@ code: |
               (type_of_final_order.any_true('property or debt','spousal support') \
                 and why_change_divorce_order == 'changed circumstances')
             ):
-            # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
+            # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation."})
             file_step_heading = 'File your motion forms'
             file_motion_to_set_aside = ''
             if unknown_final_date['set aside']:
@@ -514,7 +519,7 @@ code: |
                 and why_change_divorce_order == 'changed circumstances')
               )
           ):
-            # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal."})
+            # images_list.append({'image': service_cert_modify_spousal_support_property_image, 'text': "Certificate of Service at the bottom of a Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation."})
             log('date unknown not modify', "console")
             if unknown_final_date.all_true('reconsider', exclusive=True) \
               or unknown_final_date.all_true('appeal','reconsider', exclusive=True):
