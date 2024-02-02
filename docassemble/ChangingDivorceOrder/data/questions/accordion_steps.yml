@@ -772,7 +772,7 @@ subject: |
   Spousal Support
   % endif
 content: |
-    Changing your divorce order is called “modifying” it.  To ask the judge to change your divorce order, file a Motion to Modify. The rules for changing spousal support are different from the rules for dividing property and debt.
+    Changing your divorce order is called “modifying” it.  To ask the judge to change your divorce order, file a **Motion to Modify**. The rules for changing spousal support are different from the rules for dividing property and debt.
     % if type_of_final_order[ 'spousal support']:
     <div class="step-subheading">Change spousal support</div>
     
@@ -814,7 +814,7 @@ content: |
   * Wait to sign the form until you are in front of someone who has the power to take oaths, like a notary public.  
   * The court clerk can do this for free.  
   * Bring a valid photo ID with you.  
-  * If you cannot get to a notary public or someone who has the power to take oaths, you can "self-certify".  Use: **Self-Certification (No Notary Available), TF-835** [[Fill-In PDF](https://public.courts.alaska.gov/web/forms/docs/tf-835.pdf)]
+  * If you cannot get to a notary public or someone who has the power to take oaths, you can "self-certify."  Use: **Self-Certification (No Notary Available), TF-835** [[Fill-In PDF](https://public.courts.alaska.gov/web/forms/docs/tf-835.pdf)]
   
   <div class="step-subheading">Watch</div>
   
