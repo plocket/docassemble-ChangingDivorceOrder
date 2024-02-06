@@ -30,8 +30,6 @@ jobs:
       - name: ALKiln - Start the isolated temporary docassemble server on GitHub
         id: github_server
         uses: suffolkLITLab/ALKiln/action_for_github_server@v5
-        with:
-          CONFIG_CONTENTS: "${{ secrets.CONFIG_CONTENTS }}"
       - run: echo "ALKiln finished starting the isolated GitHub docassemble server"
         shell: bash
 
