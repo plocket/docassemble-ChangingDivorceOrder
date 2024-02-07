@@ -558,30 +558,7 @@ code: |
       #      define(step_tuple[ 1 ], iter_idx + 1)
       #    get_steps = True
                       
-      
-      if defined('final_order_period') \
-        and guess_final_order_date == 'unknown':
-          if not (
-            unknown_final_date.all_true('appeal', exclusive=True) \
-              and
-                (type_of_final_order.all_true('custody order', exclusive = True) \
-                  and why_change == 'problem') \
-                or 
-                (type_of_final_order.all_false('custody order', exclusive = True) \
-                  and why_change_divorce_order == 'problem') \
-                or
-                  (type_of_final_order['custody order'] \
-                    and why_change == 'problem' \
-                    and type_of_final_order.any_true('property or debt','spousal support') 
-                    and why_change_divorce_order == 'problem')
-          ):
-            add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-            add_unique_step((file_step, "file_idx"), step_list)
-            add_unique_step((serve_step, "serve_idx"), step_list)
-          if unknown_final_date['set aside']:
-            add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
-          if unknown_final_date['reconsider']:
-            add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
+
       
       # if (type_of_final_order['custody order'] \
       #   and why_change in('review','schedule') \
@@ -630,8 +607,31 @@ code: |
         add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
         add_unique_step((file_step, "file_idx"), step_list)
         add_unique_step((serve_step, "serve_idx"), step_list)
-        # add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
-
+        add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+      
+      if defined('final_order_period') \
+        and guess_final_order_date == 'unknown':
+          if not (
+            unknown_final_date.all_true('appeal', exclusive=True) \
+              and
+                (type_of_final_order.all_true('custody order', exclusive = True) \
+                  and why_change == 'problem') \
+                or 
+                (type_of_final_order.all_false('custody order', exclusive = True) \
+                  and why_change_divorce_order == 'problem') \
+                or
+                  (type_of_final_order['custody order'] \
+                    and why_change == 'problem' \
+                    and type_of_final_order.any_true('property or debt','spousal support') 
+                    and why_change_divorce_order == 'problem')
+          ):
+            add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
+            add_unique_step((file_step, "file_idx"), step_list)
+            add_unique_step((serve_step, "serve_idx"), step_list)
+          if unknown_final_date['set aside']:
+            add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+          if unknown_final_date['reconsider']:
+            add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)    
 
       #  add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
       #  add_unique_step((file_step, "file_idx"), step_list)
@@ -697,6 +697,8 @@ code: |
                 or (defined('final_order_period') and guess_final_order_date != 'unknown'))))):
         add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
         log('final expect step', "console")
+    
+        
     
   add_unique_step((get_help, "get_help_idx"), step_list)
     
