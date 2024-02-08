@@ -44,7 +44,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.ChangingDivorceOrder',
-      version='2023.01.05',
+      version='2023.02.05',
       description=('A docassemble extension.'),
       long_description='# docassemble.ChangingDivorceOrder\r\n\r\nA docassemble extension.\r\n\r\n## Author\r\n\r\nCaroline Robinson, CRobinson@akcourts.gov\r\n\r\n',
       long_description_content_type='text/markdown',
@@ -54,7 +54,7 @@ setup(name='docassemble.ChangingDivorceOrder',
       url='https://docassemble.org',
       packages=find_packages(),
       namespace_packages=['docassemble'],
-      install_requires=[],
+      install_requires=['docassemble.AKA2JBranding', 'docassemble.AssemblyLine>=2.27.1'],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/ChangingDivorceOrder/', package='docassemble.ChangingDivorceOrder'),
      )
