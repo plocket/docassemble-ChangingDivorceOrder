@@ -32,6 +32,9 @@ jobs:
         uses: suffolkLITLab/ALKiln/action_for_github_server@v5
       - run: echo "ALKiln finished starting the isolated GitHub docassemble server"
         shell: bash
+      
+      - name: Docker debug tmate session
+        uses: mxschmitt/action-tmate@v3
 
       - name: "Run ALKiln tests"
         if: ${{ success() }}
