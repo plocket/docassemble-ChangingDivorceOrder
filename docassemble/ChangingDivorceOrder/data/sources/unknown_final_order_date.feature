@@ -1,6 +1,9 @@
 @UnkownFinalOrder
 Feature: User paths
 
+Background:
+  Given the maximum seconds for each Step is 45
+
 @row34
 Scenario: Row #34
   Given I start the interview at "changing_divorce_order.yml"

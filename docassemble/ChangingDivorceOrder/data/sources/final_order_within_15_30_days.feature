@@ -1,6 +1,9 @@
 @within15or30
 Feature: User paths
 
+Background:
+  Given the maximum seconds for each Step is 45
+
 @row30
 Scenario: Row #30
   Given I start the interview at "changing_divorce_order.yml"

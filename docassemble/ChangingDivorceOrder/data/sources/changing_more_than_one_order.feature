@@ -1,6 +1,9 @@
 @morethan1order
 Feature: User paths
 
+Background:
+  Given the maximum seconds for each Step is 45
+
 @row92  
 Scenario: Row #92
   Given I start the interview at "changing_divorce_order.yml"
