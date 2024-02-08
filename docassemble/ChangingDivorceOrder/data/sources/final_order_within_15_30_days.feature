@@ -18,6 +18,7 @@ Scenario: Row #30
   And I should see the phrase "Find out if you and the other parent agree"
   And I should see the phrase "Tell the court about your agreement"
   And I should see the phrase "Decide if you want to file an appeal"
+  And I should see the phrase "You have only 15 days from the day the court sent the order to you."
   And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service"
@@ -46,7 +47,8 @@ Scenario: Row #30b
   And I should see the phrase "Decide the steps you want to take"
   And I should see the phrase "Find out if you and the other parent agree"
   And I should see the phrase "Tell the court about your agreement"
-  And I should see the phrase "Decide if you want to file an appeal"    
+  And I should see the phrase "Decide if you want to file an appeal"
+  And I should see the phrase "You have only 15 days from the day the court sent the order to you."  
   And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service"
@@ -99,6 +101,7 @@ Scenario: Row #31b
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 8 steps"
   And I should see the phrase "Decide if you want to file an appeal"
+  And I should see the phrase "You have only 15 days from the day the court sent the order to you."
   And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service"
@@ -155,27 +158,17 @@ Scenario: Row #52b
   And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 11 steps"
     And I should see the phrase "Decide the steps you want to take"
-    And I tap the "#cGlja19hX3N0ZXBfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Find out if you and your ex agree"
-    And I tap the "#cGFyZW50c19hZ3JlZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Tell the court about your agreement"
-    And I tap the "#dGVsbF90aGVfY291cnRfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Decide if you want to file an appeal"
-    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
+    And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
-    And I tap the "#bGVhcm5fc2V0X2FzaWRlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
-    And I tap the "#ZmlsbF9zZXRfYXNpZGVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
-    And I tap the "#Y2VydF9vZl9zZXJ2aWNlX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "File your Motion to Set Aside"
-    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Serve your ex"
-    And I tap the "#c2VydmVfc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
-    And I tap the "#ZXhwZWN0X2FmdGVyX21vdGlvbl9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Get more information or help"
-    And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
     # And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
@@ -222,6 +215,7 @@ Scenario: Row #53b
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 8 steps"
   And I should see the phrase "Decide if you want to file an appeal"
+  And I should see the phrase "You have only 30 days from the day the court sent the order to you."
   And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service"
@@ -280,6 +274,7 @@ Scenario: Row #74b
   And I should see the phrase "Find out if you and your ex agree"
   And I should see the phrase "Tell the court about your agreement"
   And I should see the phrase "Decide if you want to file an appeal"
+  And I should see the phrase "You have only 30 days from the day the court sent the order to you."
   And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service"
@@ -331,6 +326,7 @@ Scenario: Row #75b
   And I take a screenshot
   And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 8 steps"
   And I should see the phrase "Decide if you want to file an appeal"
+  And I should see the phrase "You have only 30 days from the day the court sent the order to you."
   And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
   And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
   And I should see the phrase "Fill out the Certificate of Service"
