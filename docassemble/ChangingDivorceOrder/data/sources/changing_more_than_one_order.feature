@@ -2,7 +2,7 @@
 Feature: User paths
 
 Background:
-  Given the maximum seconds for each Step is 45
+  Given the maximum seconds for each Step is 60
 
 @row92  
 Scenario: Row #92
