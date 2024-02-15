@@ -339,13 +339,6 @@ code: |
 
  
  
-      if (type_of_final_order['custody order'] and why_change in('review','schedule')) \
-          or (type_of_final_order.any_true('property or debt','spousal support') and why_change_divorce_order == 'changed circumstances'):
-        add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-        add_unique_step((file_step, "file_idx"), step_list)
-        add_unique_step((serve_step, "serve_idx"), step_list)
-        add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
-        log('modify expect','console')
 
       if ((type_of_final_order['custody order'] \
             and why_change == 'problem') \
@@ -363,12 +356,6 @@ code: |
             add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
             log('known final order date reconsider','console')
 
- 
-
-
-
-
-
   #####user does not know the date of final order. 
   #### Add steps for specific motions
       if defined('final_order_period') \
@@ -381,7 +368,7 @@ code: |
           if unknown_final_date['set aside']:
             add_unique_step((learn_set_aside_step, "learn_set_aside_idx"), step_list)
             add_unique_step((fill_set_aside_step, "fill_set_aside_idx"), step_list)
-            file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
+            # file_motion_to_set_aside = 'If you decide to file a <b>Motion to Set Aside</b>:'
 
   #### Add images to Certificate of Service step
           if unknown_final_date.all_true('reconsider', exclusive=True) \
@@ -391,7 +378,7 @@ code: |
             or unknown_final_date.all_true('appeal','set aside', exclusive=True):
             add_unique_image({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside"}, images_list)
           if unknown_final_date.all_true('reconsider','set aside', exclusive=True) \
-            or unknown_final_date.all_true('reconsider','appeal','set aside', exclusive=True):
+            or unknown_final_date.all_true('reconsider','appeal','set aside'):
             add_unique_image({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Reconsider and the Motion to Set Aside"}, images_list)
 
 
@@ -400,7 +387,9 @@ code: |
               and why_change in('review','schedule')) \
             or (type_of_final_order.any_true('property or debt','spousal support') \
               and why_change_divorce_order == 'changed circumstances'):
-            if unknown_final_date.any_true('appeal', 'reconsider'):
+            if unknown_final_date.all_true('appeal', 'reconsider', exclusive = True) \
+              or unknown_final_date.all_true('appeal', exclusive = True) \
+              or unknown_final_date.all_true('reconsider', exclusive = True):
               motion_type = 'Motion to Modify'
           elif not (
             (type_of_final_order['custody order'] \
@@ -416,9 +405,7 @@ code: |
               or unknown_final_date.all_true('appeal','set aside', exclusive=True):
               file_step_heading = 'File your Motion to Set Aside'
               motion_type = 'Motion to Set Aside'
-            if unknown_final_date.all_true('reconsider','set aside'): 
-            #\
-            #  or unknown_final_date.all_true('reconsider','appeal','set aside'):
+            if unknown_final_date['set aside'] :
               motion_type = 'Motion to Set Aside'
 
 
@@ -434,6 +421,14 @@ code: |
           if unknown_final_date['reconsider']:
             add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
             log('unknown reconsider','console')
+    
+    if (type_of_final_order['custody order'] and why_change in('review','schedule')) \
+        or (type_of_final_order.any_true('property or debt','spousal support') and why_change_divorce_order == 'changed circumstances'):
+      add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
+      add_unique_step((file_step, "file_idx"), step_list)
+      add_unique_step((serve_step, "serve_idx"), step_list)
+      add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+      log('modify expect','console')
 
  
  
