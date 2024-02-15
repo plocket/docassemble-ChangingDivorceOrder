@@ -376,11 +376,6 @@ fields:
     datatype: radio
     code: |
       final_order_date_options
-#      choices:
-#      - "It was in the last 10 days.": within 10 days
-#      - "It was more than 10 days ago, but within the last 15 days.": within 15 days
-#      - "It was more than 15 days ago": more than 15 days
-#      - I do not know: unknown
   - note: |
       #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
       Most of the time, custody, parenting plan, dividing property and debt, and spousal support are all in 1 order. The date the court sent the order to you is at the bottom of the last page. 
