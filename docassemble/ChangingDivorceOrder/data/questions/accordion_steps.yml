@@ -1,4 +1,5 @@
 comment: |
+  2024-02-15 copied from simplifying_accordion_steps_after_final_order.yml
   2024-02-12 copied from accordion_steps_mod_and_prob_combo.yml using showifdef
   2024-01-02 after testing, replace  
   ${ al_user_bundle.download_list_html() }
@@ -340,10 +341,10 @@ code: |
  
       if (type_of_final_order['custody order'] and why_change in('review','schedule')) \
           or (type_of_final_order.any_true('property or debt','spousal support') and why_change_divorce_order == 'changed circumstances'):
-      #  add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-      #  add_unique_step((file_step, "file_idx"), step_list)
-      #  add_unique_step((serve_step, "serve_idx"), step_list)
-      #  add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
+        add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
+        add_unique_step((file_step, "file_idx"), step_list)
+        add_unique_step((serve_step, "serve_idx"), step_list)
+        add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
         log('modify expect','console')
 
       if ((type_of_final_order['custody order'] \
