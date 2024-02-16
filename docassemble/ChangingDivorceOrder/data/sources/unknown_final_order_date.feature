@@ -1,6 +1,9 @@
 @UnkownFinalOrder
 Feature: User paths
 
+Background:
+  Given the maximum seconds for each Step is 45
+
 @row34
 Scenario: Row #34
   Given I start the interview at "changing_divorce_order.yml"
@@ -109,6 +112,7 @@ Scenario: Row #37 appeal and reconsider
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -141,6 +145,7 @@ Scenario: Row #38 appeal and set aside
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -207,6 +212,7 @@ Scenario: Row #40 reconsider appeal and set aside
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
@@ -267,6 +273,7 @@ Scenario: Row #42
     And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 2 steps"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Get more information or help"
     And I take a screenshot
 # And I download "changing_divorce_order.pdf"
@@ -320,6 +327,7 @@ Scenario: Row #44 appeal and reconsider
     And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 9 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -350,6 +358,7 @@ Scenario: Row #45 appeal and set aside
     And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 9 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -412,6 +421,7 @@ Scenario: Row #47 reconsider appeal and set aside
     And I should see the phrase "Your Personal Action Plan for changing your custody or parenting plan in 12 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"

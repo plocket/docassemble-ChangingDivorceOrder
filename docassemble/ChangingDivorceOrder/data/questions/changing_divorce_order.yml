@@ -376,11 +376,6 @@ fields:
     datatype: radio
     code: |
       final_order_date_options
-#      choices:
-#      - "It was in the last 10 days.": within 10 days
-#      - "It was more than 10 days ago, but within the last 15 days.": within 15 days
-#      - "It was more than 15 days ago": more than 15 days
-#      - I do not know: unknown
   - note: |
       #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
       Most of the time, custody, parenting plan, dividing property and debt, and spousal support are all in 1 order. The date the court sent the order to you is at the bottom of the last page. 
@@ -416,33 +411,39 @@ code: |
   if (final_order_date != '' and date_difference(starting=final_order_date, ending=today()).days <= 10 ) or (defined('final_order_period') and guess_final_order_date == 'within 10 days'):
     final_order_date_within_10_days = True
     final_order_date_within_15_days = False
-    final_order_date_within_30_days = False
+    final_order_date_within_30_days = False    
+    final_order_date_more_30_days = False
     log('within 10',"console")
   if (final_order_date != '' and 10 < date_difference(starting=final_order_date, ending=today()).days <= 15 ) or (defined('final_order_period') and guess_final_order_date == 'within 15 days'):
     final_order_date_within_10_days = False
     final_order_date_within_15_days = True
     final_order_date_within_30_days = False    
+    final_order_date_more_30_days = False    
     log('within 15',"console")
   if (final_order_date != '' and 10 < date_difference(starting=final_order_date, ending=today()).days <= 30 ) or (defined('final_order_period') and guess_final_order_date == 'within 30 days'):
     final_order_date_within_10_days = False
     # is line below True?
     final_order_date_within_15_days = True
-    final_order_date_within_30_days = True
+    final_order_date_within_30_days = True    
+    final_order_date_more_30_days = False
     log('within 30 true',"console")
   if (final_order_date != '' and 15 < date_difference(starting=final_order_date, ending=today()).days <= 30 ) or (defined('final_order_period') and guess_final_order_date == 'more than 15 days'):
     final_order_date_within_10_days = False
     final_order_date_within_15_days = False
-    final_order_date_within_30_days = True
+    final_order_date_within_30_days = True    
+    final_order_date_more_30_days = False
     log('more than 15 but within 30',"console")
   if (final_order_date != '' and date_difference(starting=final_order_date, ending=today()).days > 30 ) or (defined('final_order_period') and guess_final_order_date == 'more than 30 days'):
     final_order_date_within_10_days = False
     final_order_date_within_15_days = False
-    final_order_date_within_30_days = False
+    final_order_date_within_30_days = False    
+    final_order_date_more_30_days = True
     log('more than 30',"console")
   if (defined('final_order_period') and guess_final_order_date == 'unknown'):
     final_order_date_within_10_days = False
     final_order_date_within_15_days = False
-    final_order_date_within_30_days = False
+    final_order_date_within_30_days = False    
+    final_order_date_more_30_days = False
     log('no number of days',"console")
 
 ---
