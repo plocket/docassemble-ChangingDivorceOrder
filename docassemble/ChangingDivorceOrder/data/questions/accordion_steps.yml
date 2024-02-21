@@ -24,9 +24,9 @@ subquestion: |
   #### Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps
   % elif user_need ==  'respond to motion in divorce':
   % if type_of_response == 'appeal':
-  #### Your Personal Action Plan for responding to the appeal in ${ len(step_list) } steps
+  #### Your Personal Action Plan for responding to an appeal in ${ len(step_list) } steps
   % else:
-  #### Your Personal Action Plan for responding to the motion in ${ len(step_list) } steps
+  #### Your Personal Action Plan for responding to a motion in ${ len(step_list) } steps
   % endif
   % else:
   % if middle_of_case == 'yes':
