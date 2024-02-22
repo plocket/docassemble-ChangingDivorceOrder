@@ -1,6 +1,9 @@
 @foreign
 Feature: User paths
 
+Background:
+  Given the maximum seconds for each Step is 45
+
 @row1
 Scenario: Row #1
   Given I start the interview at "changing_divorce_order.yml"
