@@ -17,6 +17,9 @@ jobs:
 
   interview-testing:
     runs-on: ubuntu-latest
+
+    env:
+      DEBUG: true
     name: Run interview tests
     steps:
       - uses: actions/checkout@v3
