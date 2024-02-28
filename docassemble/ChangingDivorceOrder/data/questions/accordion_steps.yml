@@ -2,7 +2,7 @@ comment: |
   After testing:
   1. Replace:
       ${ al_user_bundle.download_list_html() }
-      [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() }) 
+      [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
     with:
       ${ download_buttons_html(al_user_bundle) }
   2. comment out:
@@ -10,6 +10,7 @@ comment: |
          <script>
            Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className += " show" })
          </script>
+---
 id: final screen
 decoration: pen-to-square
 event: confirmation_and_download
@@ -21,7 +22,7 @@ question: |
   % endif
 subquestion: |
   % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order.all_true('custody order', exclusive = True)):
-  #### Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps
+  #### Your Personal Action Plan for changing your custody or Parenting Plan order in ${ len(step_list) } steps
   % elif user_need ==  'respond to motion in divorce':
   % if type_of_response == 'appeal':
   #### Your Personal Action Plan for responding to an appeal in ${ len(step_list) } steps
@@ -40,7 +41,7 @@ subquestion: |
   % endfor
   
   ${ al_user_bundle.download_list_html() }
-  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() }) 
+  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
   
 buttons:
   - Start over: restart
@@ -63,7 +64,7 @@ code: |
      'appeal legal mistake': True,
      'set aside new evidence': True,
   }
-  
+
   log('start','console')
   step_list = []
   if len(step_list) >= 2:
@@ -214,14 +215,14 @@ code: |
       add_unique_step((file_step, "file_idx"), step_list)
       add_unique_step((serve_step, "serve_idx"), step_list)
       add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
-  
+
        ##################### after final order
     if middle_of_case == 'no':
       if type_of_final_order.all_true('custody order', exclusive = True):
         other_party_in_case = 'the other parent'
       else:
         other_party_in_case = 'your ex'
-        
+
       if (type_of_final_order['custody order'] \
           and why_change in('review', 'schedule')) \
         and (type_of_final_order.any_true('property or debt', 'spousal support') \
@@ -241,8 +242,8 @@ code: |
       if defined('final_order_period') \
         and guess_final_order_date == 'unknown':
           if unknown_final_date.all_true('reconsider', 'appeal') or unknown_final_date.all_true('reconsider', 'set aside') or unknown_final_date.all_true('appeal', 'set aside') or unknown_final_date.all_true('reconsider', 'appeal', 'set aside'):
-            add_unique_step((pick_a_step_step, "pick_a_step_idx"), step_list)       
-      
+            add_unique_step((pick_a_step_step, "pick_a_step_idx"), step_list)
+
       # Rows 24-27
       if type_of_final_order['custody order'] \
         and why_change in('review', 'schedule'):
@@ -264,7 +265,7 @@ code: |
         if not type_of_final_order['custody order']:
           file_step_heading = 'File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation'
           motion_type = 'Motion to Modify'
-          log('--simple modify divorce', "console")             
+          log('--simple modify divorce', "console")
 
       if ((type_of_final_order['custody order'] \
             and why_change == 'problem') \
@@ -281,7 +282,7 @@ code: |
           file_step_heading = 'File your Motion to Reconsider'
         else:
           motion_type = 'Motion to Modify'
-      
+
       if (type_of_final_order['custody order'] \
           and why_change == 'problem' \
           and final_order_date_within_15_days) \
@@ -298,7 +299,7 @@ code: |
                  and why_change_divorce_order == 'changed circumstances')):
           file_motion_to_set_aside = 'If you decide to file a **Motion to Set Aside** because it fits your case:'
           file_step_heading = 'File your Motion to Set Aside'
-          motion_type = 'Motion to Set Aside'               
+          motion_type = 'Motion to Set Aside'
 
       if ((type_of_final_order['custody order'] \
             and why_change == 'problem') \
@@ -333,7 +334,7 @@ code: |
             add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
             log('known final order date reconsider','console')
 
-  #####user does not know the date of final order. 
+  #####user does not know the date of final order.
   #### Add steps for specific motions
       if defined('final_order_period') \
         and guess_final_order_date == 'unknown':
@@ -370,7 +371,7 @@ code: |
           elif not (
             (type_of_final_order['custody order'] \
               and why_change in('review','schedule')) \
-            and 
+            and
             (type_of_final_order.any_true('property or debt','spousal support') \
               and why_change_divorce_order == 'changed circumstances')
             ):
@@ -518,8 +519,8 @@ content: |
   <ul><li> Wait to sign the form until you are in front of someone who has the power to take oaths, like a notary public.
   <ul><li>The court clerk can do this for free.</li>
   <li>Bring a valid photo ID with you.</li>
-  </ul></li> 
-  <li>If you cannot get to a notary public or someone who has the power to take oaths, you can "self-certify."  Use: 
+  </ul></li>
+  <li>If you cannot get to a notary public or someone who has the power to take oaths, you can "self-certify."  Use:
   <ul><li><strong>Self-Certification (No Notary Available), TF-835</strong> [<a href= "https://public.courts.alaska.gov/web/forms/docs/tf-835.pdf">Fill-In PDF</a>]</li></ul></li>
   </ul>
   
