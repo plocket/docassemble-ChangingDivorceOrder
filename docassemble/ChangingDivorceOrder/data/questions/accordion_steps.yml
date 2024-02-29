@@ -22,7 +22,7 @@ question: |
   % endif
 subquestion: |
   % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order.all_true('custody order', exclusive = True)):
-  #### Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps
+  #### Your Personal Action Plan for changing your custody or Parenting Plan order in ${ len(step_list) } steps
   % elif user_need ==  'respond to motion in divorce':
   % if type_of_response == 'appeal':
   #### Your Personal Action Plan for responding to an appeal in ${ len(step_list) } steps
