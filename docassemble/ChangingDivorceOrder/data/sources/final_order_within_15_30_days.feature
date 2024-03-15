@@ -16,7 +16,7 @@ Feature: User paths
       | final_order_date                     | today - 14           |         |
       | parents_agree                        | True                 |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 11 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 11 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
@@ -46,7 +46,7 @@ Feature: User paths
       | guess_final_order_date               | within 15 days       |         |
       | parents_agree                        | True                 |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 11 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 11 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
@@ -75,7 +75,7 @@ Feature: User paths
       | final_order_date                     | today - 14           |         |
       | parents_agree                        | False                |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 8 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 8 steps"
     And I should see the phrase "Decide if you want to file an appeal"
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -101,7 +101,7 @@ Feature: User paths
       | guess_final_order_date               | within 15 days       |         |
       | parents_agree                        | False                |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 8 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 8 steps"
     And I should see the phrase "Decide if you want to file an appeal"
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"

@@ -13,7 +13,7 @@ Scenario: Row #2
       | type_of_response | custody |  |
       | respond_to_custody | agree |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to a motion in 7 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 7 steps"
     And I should see the phrase "Let the other parent and the court know you agree with the proposed changes"
     And I should see the phrase "Respond in writing and tell the court you and the other parent agree"
     And I should see the phrase "File and serve your response within 10 or 13 days"
@@ -35,7 +35,7 @@ Scenario: Row #3
       | type_of_response | custody |  |
       | respond_to_custody | some |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to a motion in 4 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 4 steps"
     And I should see the phrase "Respond in writing and tell the court you do not agree with the proposed changes"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
@@ -54,7 +54,7 @@ Scenario: Row #5
       | type_of_response | divorce |  |
       | respond_to_custody | agree |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to a motion in 7 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 7 steps"
     And I should see the phrase "Let your spouse or ex and the court know you agree with the proposed changes"
     And I should see the phrase "Respond in writing and tell the court you and your spouse or ex agree"
     And I should see the phrase "File and serve your response within 10 or 13 days"
@@ -76,7 +76,7 @@ Scenario: Row #8
       | type_of_response | all divorce |  |
       | respond_to_custody | some |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to a motion in 4 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 4 steps"
     And I should see the phrase "Respond in writing and tell the court you do not agree with the proposed changes"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
@@ -94,7 +94,7 @@ Scenario: Row #11
       | user_need | respond to motion in divorce |  |    
       | type_of_response | reconsider |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to a motion in 3 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 3 steps"
     And I should see the phrase "If the court asks, respond in writing to the Motion to Reconsider"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "Get more information or help"
@@ -112,7 +112,7 @@ Scenario: Row #12
       | type_of_response | set aside |  |
       | respond_to_set_aside | agree |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to a motion in 7 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 7 steps"
     And I should see the phrase "Let your ex and the court know you agree with the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Respond in writing and tell the court you and your ex agree"
     And I should see the phrase "File and serve your response within 10 or 13 days"
@@ -134,7 +134,7 @@ Scenario: Row #14
       | type_of_response | set aside |  |
       | respond_to_set_aside | none |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to a motion in 4 steps"  
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 4 steps"  
     And I should see the phrase "Respond in writing and tell the court you do not agree with the Motion to Set Aside Judgment or Order"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Set Aside Judgment or Order"
@@ -153,7 +153,7 @@ Scenario: Row #15
       | type_of_response | appeal |  |
       | respond_to_appeal | agree |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to an appeal in 4 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in 4 steps"
     And I should see the phrase "Let your ex know you agree with the Appeal and decide if you want to respond in writing"
     And I should see the phrase "Contact your ex"
     And I should see the phrase "Tell the Alaska Supreme Court"
@@ -172,7 +172,7 @@ Scenario: Row #17
       | type_of_response | appeal |  |
       | respond_to_appeal | none |  |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for responding to an appeal in 2 steps"  
+    And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in 2 steps"  
     And I should see the phrase "Respond in writing to the Appeal"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
