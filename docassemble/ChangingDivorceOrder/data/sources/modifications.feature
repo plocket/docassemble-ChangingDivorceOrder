@@ -15,7 +15,7 @@ Feature: User paths
       | why_change                           | review               |         |
       | parents_agree                        | True                 |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 12 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 12 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
@@ -44,7 +44,7 @@ Feature: User paths
       | why_change                           | schedule             |         |
       | parents_agree                        | False                |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 9 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 9 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
     And I should see the phrase "Fill out your child support forms"
@@ -70,7 +70,7 @@ Feature: User paths
       | why_change                           | schedule             |         |
       | parents_agree                        | True                 |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 12 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 12 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
@@ -99,7 +99,7 @@ Feature: User paths
       | why_change                           | schedule             |         |
       | parents_agree                        | False                |         |
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 9 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 9 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
     And I should see the phrase "Fill out your child support forms"
