@@ -779,7 +779,7 @@ review:
       ${ modify_after_15 }
   - Edit: respond_to_custody
     button: |
-      **Respond to custody**:
+      **Respond to motion in custody**:
       ${ respond_to_custody }
   - Edit: respond_to_appeal
     button: |
