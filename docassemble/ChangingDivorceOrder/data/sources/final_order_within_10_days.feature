@@ -16,7 +16,7 @@ Scenario: Row #28
     | final_order_date                     | today - 9            |         | 
     | parents_agree                        | True                 |         | 
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 10 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
@@ -42,7 +42,7 @@ Scenario: Row #28b
     | guess_final_order_date               | within 10 days       |         | 
     | parents_agree                        | True                 |         | 
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 10 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
@@ -67,7 +67,7 @@ Scenario: Row #29
     | final_order_date                     | today - 9            |         | 
     | parents_agree                        | False                |         | 
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 7 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -90,7 +90,7 @@ Scenario: Row #29b
     | guess_final_order_date               | within 10 days       |         | 
     | parents_agree                        | False                |         | 
     And I take a screenshot
-    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order in 7 steps"
+    And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Fill out the Certificate of Service"

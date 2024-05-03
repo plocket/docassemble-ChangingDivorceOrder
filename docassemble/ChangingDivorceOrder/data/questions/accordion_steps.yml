@@ -21,14 +21,16 @@ question: |
   # <i class="fa-thin fa-list"></i>Your Personal Action Plan is ready!
   % endif
 subquestion: |
-  % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order.all_true('custody order', exclusive = True)):
-  #### Your Personal Action Plan for changing your custody or Parenting Plan order in ${ len(step_list) } steps
+  % if user_need == 'change foreign custody order':
+  #### Your Personal Action Plan for changing your custody or Parenting Plan order from another state in ${ len(step_list) } steps
   % elif user_need ==  'respond to motion in divorce':
   % if type_of_response == 'appeal':
-  #### Your Personal Action Plan for responding to an appeal in ${ len(step_list) } steps
+  #### Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in ${ len(step_list) } steps
   % else:
-  #### Your Personal Action Plan for responding to a motion in ${ len(step_list) } steps
+  #### Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in ${ len(step_list) } steps
   % endif
+  % elif user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order.all_true('custody order', exclusive = True):
+  #### Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in ${ len(step_list) } steps
   % else:
   % if middle_of_case == 'yes':
   #### Your Personal Action Plan for changing a court order during your divorce case in ${ len(step_list) } steps
@@ -274,7 +276,7 @@ code: |
         and final_order_date_within_10_days:
         add_unique_step((learn_reconsider_step, "learn_reconsider_idx"), step_list)
         add_unique_step((fill_reconsider_step, "fill_reconsider_idx"), step_list)
-        add_unique_image({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set # Aside."}, images_list)
+        add_unique_image({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Set Aside."}, images_list)
         if not ((type_of_final_order['custody order'] \
                  and why_change in('review', 'schedule')) \
              or (type_of_final_order.any_true('property or debt','spousal support') \
