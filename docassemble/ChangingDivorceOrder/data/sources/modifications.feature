@@ -14,7 +14,6 @@ Feature: User paths
       | type_of_final_order['custody order'] | True                 |         |
       | why_change                           | review               |         |
       | parents_agree                        | True                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 12 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
@@ -30,7 +29,7 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
   @row25
@@ -43,7 +42,6 @@ Feature: User paths
       | type_of_final_order['custody order'] | True                 |         |
       | why_change                           | schedule             |         |
       | parents_agree                        | False                |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 9 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
@@ -56,7 +54,7 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
   @row26
@@ -69,7 +67,6 @@ Feature: User paths
       | type_of_final_order['custody order'] | True                 |         |
       | why_change                           | schedule             |         |
       | parents_agree                        | True                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 12 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
@@ -85,7 +82,7 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
   @row27
@@ -98,7 +95,6 @@ Feature: User paths
       | type_of_final_order['custody order'] | True                 |         |
       | why_change                           | schedule             |         |
       | parents_agree                        | False                |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 9 steps"
     And I should see the phrase "Learn about a Motion to Modify your Parenting Plan"
     And I should see the phrase "Fill out the Motion to Modify Custody forms"
@@ -111,7 +107,7 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
   @row48
@@ -124,7 +120,6 @@ Feature: User paths
       | type_of_final_order['spousal support'] | True                  |         |
       | why_change_divorce_order               | changed circumstances |         |
       | parents_agree                          | True                  |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your ex agree"
@@ -138,7 +133,7 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
   @row49
@@ -151,7 +146,6 @@ Feature: User paths
       | type_of_final_order['spousal support'] | True                  |         |
       | why_change_divorce_order               | changed circumstances |         |
       | parents_agree                          | False                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
     And I should see the phrase "Learn about the Motion to Modify Spousal Support"
     And I should see the phrase "Fill out the motion form to modify the spousal support order"
@@ -162,7 +156,7 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
   @row70
@@ -175,7 +169,6 @@ Feature: User paths
       | type_of_final_order['property or debt'] | True                  |         |
       | why_change_divorce_order                | changed circumstances |         |
       | parents_agree                           | True                  |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your ex agree"
@@ -189,7 +182,7 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
   @row71
@@ -202,7 +195,6 @@ Feature: User paths
       | type_of_final_order['property or debt'] | True                  |         |
       | why_change_divorce_order                | changed circumstances |         |
       | parents_agree                           | False                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
     And I should see the phrase "Learn about the Motion to Modify Divorce Property & Debt Division"
     And I should see the phrase "Fill out the motion form to modify the property and debt division order"
@@ -213,5 +205,5 @@ Feature: User paths
     And I should see the phrase "What to expect after you file a Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"

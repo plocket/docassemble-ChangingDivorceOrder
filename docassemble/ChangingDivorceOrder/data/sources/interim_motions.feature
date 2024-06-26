@@ -15,7 +15,6 @@ Scenario: Row #18
         | type_of_interim_order | motion               |         |
         | interim_order_date    | today - 2            |         |
         | parents_agree         | True                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your spouse agree"
@@ -28,7 +27,7 @@ Scenario: Row #18
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -44,7 +43,6 @@ Scenario: Row #18b
         | interim_order_period     | True                 |         |
         | guess_interim_order_date | within 10 days       |         |
         | parents_agree            | True                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your spouse agree"
@@ -57,7 +55,7 @@ Scenario: Row #18b
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row19
@@ -70,7 +68,6 @@ Scenario: Row #19
         | type_of_interim_order | motion               |         |
         | interim_order_date    | today - 2            |         |
         | parents_agree         | False                |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -80,7 +77,7 @@ Scenario: Row #19
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row19b
@@ -94,7 +91,6 @@ Scenario: Row #19b
         | interim_order_period     | True                 |         |
         | guess_interim_order_date | within 10 days       |         |
         | parents_agree            | False                |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -104,7 +100,7 @@ Scenario: Row #19b
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row20
@@ -117,7 +113,6 @@ Scenario: Row #20
         | type_of_interim_order | motion               |         |
         | interim_order_date    | today - 12           |         |
         | parents_agree         | True                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 9 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your spouse agree"
@@ -129,7 +124,7 @@ Scenario: Row #20
     And I should see the phrase "What to expect after you file a motion"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row20b
@@ -143,7 +138,6 @@ Scenario: Row #20b
         | guess_interim_order_date | more than 10 days    |         |
         | parents_agree            | True                 |         |
         | type_of_interim_order    | motion               |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 9 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your spouse agree"
@@ -155,7 +149,7 @@ Scenario: Row #20b
     And I should see the phrase "What to expect after you file a motion"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row21
@@ -168,7 +162,6 @@ Scenario: Row #21
         | type_of_interim_order | motion               |         |
         | interim_order_date    | today - 12           |         |
         | parents_agree         | False                |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 6 steps"
     And I should see the phrase "Ask the judge to change an interim order"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -177,7 +170,7 @@ Scenario: Row #21
     And I should see the phrase "What to expect after you file a motion"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row21b
@@ -191,7 +184,6 @@ Scenario: Row #21b
         | guess_interim_order_date | more than 10 days    |         |
         | parents_agree            | False                |         |
         | type_of_interim_order    | motion               |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 6 steps"
     And I should see the phrase "Ask the judge to change an interim order"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -200,7 +192,7 @@ Scenario: Row #21b
     And I should see the phrase "What to expect after you file a motion"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -215,7 +207,6 @@ Scenario:  Row #22
         | middle_of_case        | yes                  |         |
         | type_of_interim_order | standing order       |         |
         | parents_agree         | True                 |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your spouse agree"
@@ -228,7 +219,7 @@ Scenario:  Row #22
     And I should see the phrase "What to expect after you file a motion"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row23
@@ -241,7 +232,6 @@ Scenario:  Row #23
         | middle_of_case        | yes                  |         |
         | type_of_interim_order | standing order       |         |
         | parents_agree         | False                |         |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order during your divorce case in 7 steps"
     And I should see the phrase "Ask the court to change the Standing Order or a similar decision"
     And I should see the phrase "Fill out your motion forms"
@@ -251,5 +241,5 @@ Scenario:  Row #23
     And I should see the phrase "What to expect after you file a motion"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"

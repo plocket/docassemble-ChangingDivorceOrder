@@ -27,7 +27,7 @@ Scenario: Row #32
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row32b
@@ -55,7 +55,7 @@ Scenario: Row #32b
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row33
@@ -79,7 +79,7 @@ Scenario: Row #33
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row33b
@@ -104,7 +104,7 @@ Scenario: Row #33b
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row54
@@ -131,7 +131,7 @@ Scenario: Row #54
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row54b
@@ -159,7 +159,7 @@ Scenario: Row #54b
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row55
@@ -183,7 +183,7 @@ Scenario: Row #55
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row55b
@@ -208,7 +208,7 @@ Scenario: Row #55b
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row76
@@ -235,7 +235,7 @@ Scenario: Row #76
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row76b
@@ -263,7 +263,7 @@ Scenario: Row #76b
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row77
@@ -287,7 +287,7 @@ Scenario: Row #77
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row77b
@@ -312,5 +312,5 @@ Scenario: Row #77b
     And I should see the phrase "What to expect after you file a Motion to Set Aside"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"

@@ -38,18 +38,35 @@ subquestion: |
   #### Your Personal Action Plan for changing a court order from your divorce case in ${ len(step_list) } steps
   % endif
   % endif
+  
+  % if "docassembledev" in interview_url():
+  <button id="akc_expand_all" class="btn other stuff">Expand all</button>
+  <button id="akc_collapse_all" class="btn other stuff">Collapse all</button>
+  % endif
+  
   % for iteration_index, step_tuple in enumerate( step_list ):
   ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
   % endfor
   
   ${ al_user_bundle.download_list_html() }
-  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
   
+  % if "docassembledev" in interview_url():
+  [get the docx file](${ docx_divorce_dissolution_separation_action_plan_attachment.docx.url_for() })
+  % endif 
+   
 buttons:
   - Start over: restart
 script: |
   <script>
-    Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className += " show" })
+  let expander = $("#akc_expand_all")
+  expander.on("click", function () {
+   Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className += " show" })
+  })
+  
+  let collapser = $("#akc_collapse_all")
+  collapser.on("click", function () {
+      Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className = elem.className.replace(" show", "" ) })
+  })
   </script>
 ---
 code: |

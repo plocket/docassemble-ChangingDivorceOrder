@@ -12,7 +12,6 @@ Scenario: Row #2
       | user_need | respond to motion in divorce |  |    
       | type_of_response | custody |  |
       | respond_to_custody | agree |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 7 steps"
     And I should see the phrase "Let the other parent and the court know you agree with the proposed changes"
     And I should see the phrase "Respond in writing and tell the court you and the other parent agree"
@@ -22,7 +21,7 @@ Scenario: Row #2
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -34,14 +33,13 @@ Scenario: Row #3
       | user_need | respond to motion in divorce |  |    
       | type_of_response | custody |  |
       | respond_to_custody | some |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 4 steps"
     And I should see the phrase "Respond in writing and tell the court you do not agree with the proposed changes"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -53,7 +51,6 @@ Scenario: Row #5
       | user_need | respond to motion in divorce |  |    
       | type_of_response | divorce |  |
       | respond_to_custody | agree |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 7 steps"
     And I should see the phrase "Let your spouse or ex and the court know you agree with the proposed changes"
     And I should see the phrase "Respond in writing and tell the court you and your spouse or ex agree"
@@ -63,7 +60,7 @@ Scenario: Row #5
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -75,14 +72,13 @@ Scenario: Row #8
       | user_need | respond to motion in divorce |  |
       | type_of_response | all divorce |  |
       | respond_to_custody | some |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 4 steps"
     And I should see the phrase "Respond in writing and tell the court you do not agree with the proposed changes"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -93,13 +89,12 @@ Scenario: Row #11
       | var | value | trigger |
       | user_need | respond to motion in divorce |  |    
       | type_of_response | reconsider |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 3 steps"
     And I should see the phrase "If the court asks, respond in writing to the Motion to Reconsider"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -111,7 +106,6 @@ Scenario: Row #12
       | user_need | respond to motion in divorce |  |    
       | type_of_response | set aside |  |
       | respond_to_set_aside | agree |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 7 steps"
     And I should see the phrase "Let your ex and the court know you agree with the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Respond in writing and tell the court you and your ex agree"
@@ -121,7 +115,7 @@ Scenario: Row #12
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -133,14 +127,13 @@ Scenario: Row #14
       | user_need | respond to motion in divorce |  |    
       | type_of_response | set aside |  |
       | respond_to_set_aside | none |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in 4 steps"  
     And I should see the phrase "Respond in writing and tell the court you do not agree with the Motion to Set Aside Judgment or Order"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -152,14 +145,13 @@ Scenario: Row #15
       | user_need | respond to motion in divorce |  |    
       | type_of_response | appeal |  |
       | respond_to_appeal | agree |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in 4 steps"
     And I should see the phrase "Let your ex know you agree with the Appeal and decide if you want to respond in writing"
     And I should see the phrase "Contact your ex"
     And I should see the phrase "Tell the Alaska Supreme Court"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 
@@ -171,10 +163,9 @@ Scenario: Row #17
       | user_need | respond to motion in divorce |  |    
       | type_of_response | appeal |  |
       | respond_to_appeal | none |  |
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in 2 steps"  
     And I should see the phrase "Respond in writing to the Appeal"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
-    # And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"

@@ -15,7 +15,6 @@ Scenario: Row #28
     | why_change                           | problem              |         | 
     | final_order_date                     | today - 9            |         | 
     | parents_agree                        | True                 |         | 
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
@@ -27,7 +26,9 @@ Scenario: Row #28
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row28b
 Scenario: Row #28b
@@ -41,7 +42,6 @@ Scenario: Row #28b
     | final_order_period                   | True                 |         | 
     | guess_final_order_date               | within 10 days       |         | 
     | parents_agree                        | True                 |         | 
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and the other parent agree"
@@ -53,7 +53,9 @@ Scenario: Row #28b
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row29
 Scenario: Row #29
@@ -66,7 +68,6 @@ Scenario: Row #29
     | why_change                           | problem              |         | 
     | final_order_date                     | today - 9            |         | 
     | parents_agree                        | False                |         | 
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -75,7 +76,9 @@ Scenario: Row #29
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row29b
 Scenario: Row #29b
@@ -89,7 +92,6 @@ Scenario: Row #29b
     | final_order_period                   | True                 |         | 
     | guess_final_order_date               | within 10 days       |         | 
     | parents_agree                        | False                |         | 
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -98,7 +100,9 @@ Scenario: Row #29b
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row50
 Scenario: Row #50
@@ -111,7 +115,6 @@ Scenario: Row #50
     | why_change_divorce_order               | problem              |         | 
     | final_order_date                       | today - 9            |         | 
     | parents_agree                          | True                 |         | 
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your ex agree"
@@ -123,7 +126,9 @@ Scenario: Row #50
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row50b
 Scenario: Row #50b
@@ -137,7 +142,6 @@ Scenario: Row #50b
     | final_order_period                     | True                 |         | 
     | guess_final_order_date                 | within 10 days       |         | 
     | parents_agree                          | True                 |         | 
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your ex agree"
@@ -149,7 +153,9 @@ Scenario: Row #50b
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row51
 Scenario: Row #51
@@ -162,7 +168,6 @@ Scenario: Row #51
     | why_change_divorce_order               | problem              |         | 
     | final_order_date                       | today - 9            |         | 
     | parents_agree                          | False                |         | 
-    And I take a screenshot
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -171,7 +176,9 @@ Scenario: Row #51
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row51b
 Scenario: Row #51b
@@ -185,7 +192,7 @@ Scenario: Row #51b
     | final_order_period                     | True                 |         | 
     | guess_final_order_date                 | within 10 days       |         | 
     | parents_agree                          | False                |         | 
-    And I take a screenshot
+
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -194,7 +201,9 @@ Scenario: Row #51b
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row72
 Scenario: Row #72
@@ -207,7 +216,7 @@ Scenario: Row #72
     | why_change_divorce_order                | problem              |         | 
     | final_order_date                        | today - 9            |         | 
     | parents_agree                           | True                 |         | 
-    And I take a screenshot
+
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your ex agree"
@@ -219,7 +228,9 @@ Scenario: Row #72
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row72b
 Scenario: Row #72b
@@ -233,7 +244,7 @@ Scenario: Row #72b
     | final_order_period                      | True                 |         | 
     | guess_final_order_date                  | within 10 days       |         | 
     | parents_agree                           | True                 |         | 
-    And I take a screenshot
+
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 10 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Find out if you and your ex agree"
@@ -244,7 +255,9 @@ Scenario: Row #72b
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
     And I should see the phrase "Get more information or help"
+    And I take a screenshot
     And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.docx"
 
 @row73
 Scenario: Row #73
@@ -257,7 +270,7 @@ Scenario: Row #73
     | why_change_divorce_order                | problem              |         | 
     | final_order_date                        | today - 9            |         | 
     | parents_agree                           | False                |         | 
-    And I take a screenshot
+
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
@@ -274,7 +287,7 @@ Scenario: Row #73
     And I should see the phrase "Get more information or help"
     And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"
 
 @row73b
@@ -289,7 +302,7 @@ Scenario: Row #73b
     | final_order_period                      | True                 |         | 
     | guess_final_order_date                  | within 10 days       |         | 
     | parents_agree                           | False                |         | 
-    And I take a screenshot
+
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 7 steps"
     And I should see the phrase "Learn about Motions to Reconsider"
     And I tap the "#bGVhcm5fcmVjb25zaWRlcl9zdGVw .al_toggle" element and stay on the same page
@@ -306,5 +319,5 @@ Scenario: Row #73b
     And I should see the phrase "Get more information or help"
     And I tap the "#Z2V0X2hlbHA .al_toggle" element and stay on the same page
     And I take a screenshot
-# And I download "changing_divorce_order.pdf"
+    And I download "changing_divorce_order.pdf"
     And I download "changing_divorce_order.docx"

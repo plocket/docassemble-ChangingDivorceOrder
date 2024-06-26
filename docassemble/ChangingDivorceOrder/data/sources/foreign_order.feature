@@ -24,4 +24,6 @@ Scenario: Row #1
   And I should see the phrase "Serve the other parent"
   And I should see the phrase "What to expect after you file a Motion to Modify"
   And I should see the phrase "Get more information or help"
+  And I take a screenshot
   And I download "changing_divorce_order.pdf"
+  And I download "changing_divorce_order.docx"
