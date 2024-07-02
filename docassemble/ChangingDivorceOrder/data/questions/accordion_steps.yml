@@ -1,16 +1,3 @@
-comment: |
-  After testing:
-  1. Replace:
-      ${ al_user_bundle.download_list_html() }
-      [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
-    with:
-      ${ download_buttons_html(al_user_bundle) }
-  2. comment out:
-       script: |
-         <script>
-           Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className += " show" })
-         </script>
----
 id: final screen
 decoration: pen-to-square
 event: confirmation_and_download
@@ -51,7 +38,7 @@ subquestion: |
   ${ al_user_bundle.download_list_html() }
   
   % if "docassembledev" in interview_url():
-  [get the docx file](${ docx_divorce_dissolution_separation_action_plan_attachment.docx.url_for() })
+  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
   % endif 
    
 buttons:
@@ -122,8 +109,8 @@ code: |
     add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
     file_step_heading = 'File your Motion to Modify'
     file_modify_filing_fee = '<li>Pay the $75 fee to file your Motion to Modify.</br>If you cannot afford the filing fee, you can ask the court to waive it:</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
-    add_unique_step((file_step, "file_idx"), step_list)
-    add_unique_step((serve_step, "serve_idx"), step_list)
+    add_unique_step((file_motion_step, "file_motion_idx"), step_list)
+    add_unique_step((serve_motion_step, "serve_motion_idx"), step_list)
     motion_type = 'Motion to Modify'
     add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
   
@@ -201,8 +188,8 @@ code: |
       add_unique_image({'image': service_cert_reconsider_set_aside_image, 'text': "Certificate of Service at the bottom of the Motion to Reconsider"}, images_list)
       add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
       file_step_heading = 'File your Motion to Reconsider'
-      add_unique_step((file_step, "file_idx"), step_list)
-      add_unique_step((serve_step, "serve_idx"), step_list)
+      add_unique_step((file_motion_step, "file_motion_idx"), step_list)
+      add_unique_step((serve_motion_step, "serve_motion_idx"), step_list)
       add_unique_step((expect_reconsider_step, "expect_reconsider_idx"), step_list)
       
     # Rows 20 & 21
@@ -216,8 +203,8 @@ code: |
       add_unique_step((motion_forms_step, "motion_forms_idx"), step_list)
       add_unique_image({'image': service_cert_motion_shc_1300_image, 'text': "Certificate of Service at the bottom of a motion."}, images_list)
       add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list) 
-      add_unique_step((file_step, "file_idx"), step_list)
-      add_unique_step((serve_step, "serve_idx"), step_list)
+      add_unique_step((file_motion_step, "file_motion_idx"), step_list)
+      add_unique_step((serve_motion_step, "serve_motion_idx"), step_list)
       add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
    
     # Rows 22-23 
@@ -231,8 +218,8 @@ code: |
       add_unique_step((motion_forms_step, "motion_forms_idx"), step_list)
       add_unique_image({'image': service_cert_motion_shc_1300_image, 'text': "Certificate of Service at the bottom of a motion."}, images_list)
       add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list) 
-      add_unique_step((file_step, "file_idx"), step_list)
-      add_unique_step((serve_step, "serve_idx"), step_list)
+      add_unique_step((file_motion_step, "file_motion_idx"), step_list)
+      add_unique_step((serve_motion_step, "serve_motion_idx"), step_list)
       add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
 
        ##################### after final order
@@ -246,7 +233,7 @@ code: |
           and why_change in('review', 'schedule')) \
         and (type_of_final_order.any_true('property or debt', 'spousal support') \
           and why_change_divorce_order == 'changed circumstances'):
-        file_modify_filing_fee = '<li>Pay one $75 fee to file both Motions to Modify at the same time. If you file your motions on different days, you must pay a $75 filing fee for each Motion to Modify.</br>If you cannot afford the filing fee, you can ask the court to waive it:</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-HelpCenter</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
+        file_modify_filing_fee = '<li>Pay one $75 fee to file both Motions to Modify at the same time. If you file your motions on different days, you must pay a $75 filing fee for each Motion to Modify.</br>If you cannot afford the filing fee, you can ask the court to waive it:</li><ul><li>Call the <a href="https://courts.alaska.gov/shc/family">Family Law Self-Help Center</a><br>(907)264-0851, or<br>(866)279-0851,<br>or</li><li>Use <strong>Exemption From the Payment of Fees, TF-920</strong>[<a href="https://public.courts.alaska.gov/web/forms/docs/tf-920.pdf">Fill-In PDF</a>]</li></ul>'
       elif (type_of_final_order['custody order'] \
           and why_change in('review', 'schedule')) \
         or (type_of_final_order.any_true('property or debt', 'spousal support') \
@@ -343,8 +330,8 @@ code: |
               and why_change_divorce_order == 'problem')) \
           and showifdef('guess_final_order_date') != 'unknown':
           add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-          add_unique_step((file_step, "file_idx"), step_list)
-          add_unique_step((serve_step, "serve_idx"), step_list)
+          add_unique_step((file_motion_step, "file_motion_idx"), step_list)
+          add_unique_step((serve_motion_step, "serve_motion_idx"), step_list)
           if not final_order_date_within_10_days:
             # motion_type = 'Motion to Set Aside'
             add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
@@ -407,8 +394,8 @@ code: |
   #####SKIP steps for certificate of service, file, and serve if user is interested only in appeals and does not know the date of final order.
           if not unknown_final_date.all_true('appeal', exclusive=True):
             add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-            add_unique_step((file_step, "file_idx"), step_list)
-            add_unique_step((serve_step, "serve_idx"), step_list)
+            add_unique_step((file_motion_step, "file_motion_idx"), step_list)
+            add_unique_step((serve_motion_step, "serve_motion_idx"), step_list)
           if unknown_final_date['set aside'] or ((type_of_final_order['custody order'] and why_change in('review','schedule')) \
           or (type_of_final_order.any_true('property or debt','spousal support') and why_change_divorce_order == 'changed circumstances')):
             add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
@@ -420,8 +407,8 @@ code: |
       if (type_of_final_order['custody order'] and why_change in('review','schedule')) \
           or (type_of_final_order.any_true('property or debt','spousal support') and why_change_divorce_order == 'changed circumstances'):
         add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
-        add_unique_step((file_step, "file_idx"), step_list)
-        add_unique_step((serve_step, "serve_idx"), step_list)
+        add_unique_step((file_motion_step, "file_motion_idx"), step_list)
+        add_unique_step((serve_motion_step, "serve_motion_idx"), step_list)
         add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
         log('modify expect','console')
 
