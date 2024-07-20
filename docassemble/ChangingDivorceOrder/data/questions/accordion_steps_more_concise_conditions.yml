@@ -13,13 +13,15 @@ subquestion: |
   % elif user_need ==  'respond to motion in divorce':
   % if middle_of_case == 'no' and type_of_response == 'appeal':
   #### Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in ${ len(step_list) } steps
+  % elif middle_of_case == 'yes':
+  #### Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in ${ len(step_list) } steps
   % else:
-  #### Your Personal Action Plan for responding to a motion your spouse or ex filed to change a court order in your divorce case, in ${ len(step_list) } steps
+  #### Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case, in ${ len(step_list) } steps
   % endif
-  % elif user_need == 'change divorce order' and defined('type_of_final_order') and type_of_final_order.all_true('custody order', exclusive = True):
-  #### Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in ${ len(step_list) } steps
   % else:
-  % if middle_of_case == 'yes':
+  % if middle_of_case == 'no' and type_of_final_order.all_false('spousal support', 'property or debt', 'other'):
+  #### Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in ${ len(step_list) } steps
+  % elif middle_of_case == 'yes':
   #### Your Personal Action Plan for changing a court order during your divorce case in ${ len(step_list) } steps
   % else:
   #### Your Personal Action Plan for changing a court order from your divorce case in ${ len(step_list) } steps
@@ -111,7 +113,7 @@ code: |
     add_unique_step((expect_after_motion_step, "expect_after_motion_idx"), step_list)
   
   elif user_need == 'respond to motion in divorce':
-    if middle_of_case:
+    if middle_of_case == 'yes':
       other_party_in_case = "your spouse"
     else:
       other_party_in_case = "your ex"
@@ -145,12 +147,12 @@ code: |
       add_unique_step((respond_in_writing_step, "respond_in_writing_idx"), step_list)
     
     # Row 2-14  
-    if type_of_response in('modify','set aside') or (middle_of_case == 'no' and type_of_response =='set aside'):
+    # if type_of_response == 'modify' or (middle_of_case == 'no' and type_of_response == 'set aside'):
       add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
       add_unique_step((file_response_step, "file_response_idx"), step_list)
     
     # Row 2-10, 12-14
-    if type_of_response == 'modify' or (middle_of_case == 'no' and type_of_response == 'set aside'):
+    # if type_of_response == 'modify' or (middle_of_case == 'no' and type_of_response == 'set aside'):
       add_unique_step((expect_after_response_step, "expect_after_response_idx"), step_list)
       
     if (type_of_response == 'modify' and respond_to_modify == 'agree') or (middle_of_case == 'no' and type_of_response == 'set aside' and respond_to_set_aside == 'agree'):
@@ -492,7 +494,7 @@ content: |
   % elif user_need in('respond to motion in custody', 'respond to motion in divorce'):
   Your judge will decide the motion based on {{ other_party_in_case }}'s request, your response, and the law. Learning about the law can help you decide what to write in your response.
   % endif
-  % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and type_of_final_order['custody order'] and why_change in('review', 'schedule')) or (user_need in('respond to motion in custody', 'respond to motion in divorce') and type_of_response == 'modify' and type_of_modification['custody']):  
+  % if user_need == 'change foreign custody order' or (user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order['custody order'] and why_change in('review', 'schedule')) or (user_need in('respond to motion in custody', 'respond to motion in divorce') and type_of_response == 'modify' and type_of_modification['custody']):  
   The courts want children to have a regular schedule without a lot of changes. The courts will generally only change a parenting plan if there is a "substantial change in circumstances." A "substantial change in circumstances" means something has happened so that the old custody or parenting plan is no longer in the children's best interest.
 
   <div class="step-subheading">Some examples</div>
@@ -537,23 +539,23 @@ Comment: |
 template: modify_divorce_step
 subject: |
   Step ${ modify_divorce_idx }: Learn about the Motion to Modify
-  % if (user_need == 'change divorce order' and type_of_final_order['property or debt']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['property or debt']):
+  % if (user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order['property or debt']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['property or debt']):
   Divorce Property & Debt Division
   % endif
-  % if (user_need == 'change divorce order' and type_of_final_order.all_true('property or debt', 'spousal support')) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['property or debt']):
+  % if (user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order.all_true('property or debt', 'spousal support')) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification.all_true('spousal support', 'property or debt')):
    and 
   % endif
-  % if (user_need == 'change divorce order' and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['spousal support']):
+  % if (user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['spousal support']):
   Spousal Support
   % endif
 content: |
-  % if user_need != 'respond to motion in divorce':
+  % if user_need == 'change divorce order':
   Changing your divorce order is called “modifying” it.  To ask the judge to change your divorce order, file a **Motion to Modify**. The rules for changing spousal support are different from the rules for dividing property and debt.
   % endif
-  % if user_need == 'change divorce order' and type_of_final_order['spousal support']:
+  % if user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order['spousal support']:
   <div class="step-subheading">Change spousal support</div>
   % endif
-  % if (user_need == 'change divorce order' and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_modification['spousal support']):
+  % if (user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['spousal support']):
   The court will generally only change spousal support if there is a "substantial change in circumstances."
   <div class = "example">
   <div class = "heading">Some examples</div>
@@ -564,11 +566,11 @@ content: |
   </div>
   % endif
 
-  % if user_need != 'change divorce order' and type_of_final_order['property or debt']:
+  % if user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order['property or debt']:
   <div class="step-subheading">Change the property and debt division</div>
   % endif
 
-  % if (user_need == 'change divorce order' and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['property or debt']):
+  % if (user_need == 'change divorce order' and middle_of_case == 'no'and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['property or debt']):
   Changing the outcome of final property and debt decisions in a divorce case can be tough. Once the court decides who gets what, it is not easy to undo those decisions.
   
   <div class = "example">
@@ -580,9 +582,6 @@ content: |
   </div>
   % endif
   
-  % if user_need == 'change divorce order' and middle_of_case == 'no':
-  The court charges $75 to file this motion. If you cannot afford the fee, you may be able to get the court to waive it. See the Step ${file_motion_idx}.
-  % endif
 --- 
 template: fill_modify_divorce_step
 subject: |
