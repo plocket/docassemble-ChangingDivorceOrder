@@ -16,12 +16,12 @@ Scenario: Row #2a
     | respond_to_modify                     | agree                        |         | 
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in 9 steps"
     And I should see the phrase "Learn about motions to modify a child support order"
-    And I should see the phrase "Let the other parent and the court know you agree with the proposed changes"
-    And I should see the phrase "Respond in writing and tell the court you and the other parent agree"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Let your spouse and the court know you agree with the proposed changes"
+    And I should see the phrase "Respond in writing and tell the court you and your spouse agree"
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
-    And I should see the phrase "Contact the other parent, and write out your agreement"
+    And I should see the phrase "Contact your spouse, and write out your agreement"
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
@@ -38,14 +38,14 @@ Scenario: Row #2
     | type_of_response                | modify                       |         | 
     | type_of_modification['custody'] | True                         |         | 
     | respond_to_modify               | agree                        |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order in your divorce case, in 9 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case, in 9 steps"
     And I should see the phrase "Learn about motions to modify custody or a Parenting Plan order"
-    And I should see the phrase "Let the other parent and the court know you agree with the proposed changes"
-    And I should see the phrase "Respond in writing and tell the court you and the other parent agree"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Let your ex and the court know you agree with the proposed changes"
+    And I should see the phrase "Respond in writing and tell the court you and your ex agree"
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
-    And I should see the phrase "Contact the other parent, and write out your agreement"
+    And I should see the phrase "Contact your ex, and write out your agreement"
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
@@ -65,7 +65,7 @@ Scenario: Row #3a
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in 6 steps"
     And I should see the phrase "Learn about motions to modify custody or a Parenting Plan order"
     And I should see the phrase "Respond in writing and tell the court you do not agree with the proposed changes"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
     And I should see the phrase "Get more information or help"
@@ -84,10 +84,10 @@ Scenario: Row #3c
     | type_of_modification['child support'] | True                         |         | 
     | type_of_modification['custody']       | True                         |         | 
     | respond_to_modify                     | some                         |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order in your divorce case, in 6 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case, in 6 steps"
     And I should see the phrase "Learn about motions to modify custody or a Parenting Plan order"
     And I should see the phrase "Respond in writing and tell the court you do not agree with the proposed changes"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
     And I should see the phrase "Get more information or help"
@@ -106,13 +106,13 @@ Scenario: Row #5a
     | type_of_modification['spousal support'] | True                         |         | 
     | respond_to_modify                      | agree                        |         | 
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in 9 steps"
-    And I should see the phrase "Learn about motions to modify an order for spousal support and division of property and debt"
-    And I should see the phrase "Let your spouse or ex and the court know you agree with the proposed changes"
-    And I should see the phrase "Respond in writing and tell the court you and your spouse or ex agree"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Learn about motions to modify spousal support"
+    And I should see the phrase "Let your spouse and the court know you agree with the proposed changes"
+    And I should see the phrase "Respond in writing and tell the court you and your spouse agree"
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
-    And I should see the phrase "Contact your spouse or ex, and write out your agreement"
+    And I should see the phrase "Contact your spouse, and write out your agreement"
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
@@ -127,16 +127,16 @@ Scenario: Row #5b
     | user_need                               | respond to motion in divorce |         | 
     | middle_of_case                          | no                           |         | 
     | type_of_response                        | modify                       |         | 
-    | type_of_modification['property or debt'] | True                         |         | 
+    | type_of_modification['property or debt']| True                         |         | 
     | respond_to_modify                       | agree                        |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order in your divorce case, in 9 steps"
-    And I should see the phrase "Learn about motions to modify an order for spousal support and division of property and debt"
-    And I should see the phrase "Let your spouse or ex and the court know you agree with the proposed changes"
-    And I should see the phrase "Respond in writing and tell the court you and your spouse or ex agree"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case, in 9 steps"
+    And I should see the phrase "Learn about motions to modify division of property and debt"
+    And I should see the phrase "Let your ex and the court know you agree with the proposed changes"
+    And I should see the phrase "Respond in writing and tell the court you and your ex agree"
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
-    And I should see the phrase "Contact your spouse or ex, and write out your agreement"
+    And I should see the phrase "Contact your ex, and write out your agreement"
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
@@ -151,17 +151,17 @@ Scenario: Row #5c
     | user_need                                | respond to motion in divorce |         | 
     | middle_of_case                           | yes                          |         | 
     | type_of_response                         | modify                       |         | 
-    | type_of_modification['spousal support']   | True                         |         | 
+    | type_of_modification['spousal support']  | True                         |         | 
     | type_of_modification['property or debt'] | True                         |         | 
     | respond_to_modify                        | agree                        |         | 
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in 9 steps"
-    And I should see the phrase "Learn about motions to modify an order for spousal support and division of property and debt"
-    And I should see the phrase "Let your spouse or ex and the court know you agree with the proposed changes"
-    And I should see the phrase "Respond in writing and tell the court you and your spouse or ex agree"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Learn about motions to modify spousal support and division of property and debt"
+    And I should see the phrase "Let your spouse and the court know you agree with the proposed changes"
+    And I should see the phrase "Respond in writing and tell the court you and your spouse agree"
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
-    And I should see the phrase "Contact your spouse or ex, and write out your agreement"
+    And I should see the phrase "Contact your spouse, and write out your agreement"
     And I should see the phrase "File your agreement with the court within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
@@ -179,14 +179,14 @@ Scenario: Row #8
     | type_of_modification['custody']          | True                         |         | 
     | type_of_modification['child support']    | True                         |         | 
     | type_of_modification['other']            | True                         |         | 
-    | type_of_modification['spousal support']   | True                         |         | 
+    | type_of_modification['spousal support']  | True                         |         | 
     | type_of_modification['property or debt'] | True                         |         | 
     | respond_to_modify                        | some                         |         | 
     And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in 7 steps"
     And I should see the phrase "Learn about motions to modify custody or a Parenting Plan order"
-    And I should see the phrase "Learn about motions to modify an order for spousal support and division of property and debt"
+    And I should see the phrase "Learn about motions to modify spousal support and division of property and debt"
     And I should see the phrase "Respond in writing and tell the court you do not agree with the proposed changes"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Modify"
     And I should see the phrase "Get more information or help"
@@ -202,9 +202,9 @@ Scenario: Row #11
     | user_need        | respond to motion in divorce |         | 
     | middle_of_case   | yes                          |         | 
     | type_of_response | reconsider                   |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in 4 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in 2 steps"
     And I should see the phrase "If the court asks, respond in writing to the Motion to Reconsider"
-    # And I should see the phrase "Fill out the Certificate of Service "
+    # And I should see the phrase "Fill out the Certificate of Service"
     # And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
@@ -220,10 +220,10 @@ Scenario: Row #12
     | middle_of_case       | no                           |         | 
     | type_of_response     | set aside                    |         | 
     | respond_to_set_aside | agree                        |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order in your divorce case, in 8 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case, in 8 steps"
     And I should see the phrase "Let your ex and the court know you agree with the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Respond in writing and tell the court you and your ex agree"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Contact your ex, and write out your agreement"
@@ -242,9 +242,9 @@ Scenario: Row #14
     | middle_of_case       | no                           |         | 
     | type_of_response     | set aside                    |         | 
     | respond_to_set_aside | none                         |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order in your divorce case, in 5 steps"  
+    And I should see the phrase "Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case, in 5 steps"  
     And I should see the phrase "Respond in writing and tell the court you do not agree with the Motion to Set Aside Judgment or Order"
-    And I should see the phrase "Fill out the Certificate of Service "
+    And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File and serve your response within 10 or 13 days"
     And I should see the phrase "What to expect after you respond to the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Get more information or help"
@@ -261,7 +261,7 @@ Scenario: Row #15
     | middle_of_case    | no                           |         | 
     | type_of_response  | appeal                       |         | 
     | respond_to_appeal | agree                        |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in 4 steps"
+    And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order from your divorce case, in 4 steps"
     And I should see the phrase "Let your ex know you agree with the Appeal and decide if you want to respond in writing"
     And I should see the phrase "Contact your ex"
     And I should see the phrase "Tell the Alaska Supreme Court"
@@ -279,7 +279,7 @@ Scenario: Row #17
     | middle_of_case    | no                           |         | 
     | type_of_response  | appeal                       |         | 
     | respond_to_appeal | none                         |         | 
-    And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order in your divorce case, in 2 steps"  
+    And I should see the phrase "Your Personal Action Plan for responding to the appeal your ex filed to change a court order from your divorce case, in 2 steps"  
     And I should see the phrase "Respond in writing to the Appeal"
     And I should see the phrase "Get more information or help"
     And I take a screenshot
