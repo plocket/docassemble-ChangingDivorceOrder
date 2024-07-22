@@ -29,6 +29,7 @@ Scenario: Row #92
     And I should see the phrase "Fill out the motion form to modify the spousal support order"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay one $75 fee to file both Motions to Modify at the same time."
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -59,6 +60,7 @@ Scenario: Row #95
     And I should see the phrase "Fill out the motion form to modify the property and debt division order"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay one $75 fee to file both Motions to Modify at the same time."
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -90,6 +92,7 @@ Scenario: Row #97
     And I should see the phrase "Fill out the motion form to modify the property and debt division and the spousal support orders"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay one $75 fee to file both Motions to Modify at the same time."
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -121,6 +124,7 @@ Scenario: Row #99
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"  
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -153,11 +157,13 @@ Scenario: Row #100
     And I should see the phrase "Fill out your child support forms"
     And I should see the phrase "Do not wait to file your Motion to Modify"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -192,6 +198,7 @@ Scenario: Row #102
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -230,6 +237,7 @@ Scenario: Row #104
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -268,8 +276,10 @@ Scenario: Row #107
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"  
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -311,6 +321,7 @@ Scenario: Row #109
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -350,6 +361,7 @@ Scenario: Row #112
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -386,6 +398,7 @@ Scenario: Row #113
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -419,11 +432,13 @@ Scenario: Row #115
     And I should see the phrase "Fill out your child support forms"
     And I should see the phrase "Do not wait to file your Motion to Modify"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -459,10 +474,12 @@ Scenario: Row #117
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
@@ -493,6 +510,7 @@ Scenario: Row #118
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Fill out the Certificate of Service" 
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Reconsider"
@@ -549,6 +567,7 @@ Scenario: Row #140
     And I should see the phrase "Find out if you and your ex agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
