@@ -29,6 +29,7 @@ Scenario: Row #92
     And I should see the phrase "Fill out the motion form to modify the spousal support order"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your motion forms"
+    And I tap the "#ZmlsZV9zdGVw .al_toggle" element and stay on the same page
     And I should see the phrase "Pay one $75 fee to file both Motions to Modify at the same time."
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a motion"
