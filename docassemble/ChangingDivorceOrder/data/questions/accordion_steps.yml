@@ -1,10 +1,3 @@
-comment: |
-  
-  % if "docassembledev" in interview_url():
-  <button id="akc_expand_all" class="btn other stuff">Expand all</button>
-  <button id="akc_collapse_all" class="btn other stuff">Collapse all</button>
-  % endif
-  
 ---
 id: final screen
 decoration: pen-to-square
@@ -18,16 +11,20 @@ question: |
 subquestion: |
   % if user_need == 'change foreign custody order':
   #### Your Personal Action Plan for changing your custody or Parenting Plan order from another state in ${ len(step_list) } steps
-  % elif user_need ==  'respond to motion in divorce':
+  % endif
+  % if user_need == 'respond to motion in divorce':
   % if middle_of_case == 'no' and type_of_response == 'appeal':
   #### Your Personal Action Plan for responding to the appeal your ex filed to change a court order from your divorce case, in ${ len(step_list) } steps
-  % elif middle_of_case == 'yes':
-  #### Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in ${ len(step_list) } steps
-  % else:
+  % endif
+  % if middle_of_case == 'no' and type_of_response != 'appeal':
   #### Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case, in ${ len(step_list) } steps
   % endif
-  % else:
-  % if middle_of_case == 'no' and type_of_final_order.all_false('spousal support', 'property or debt', 'other'):
+  % if middle_of_case == 'yes':
+  #### Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case, in ${ len(step_list) } steps
+  % endif
+  % endif
+  % if user_need == 'change divorce order':
+  % if middle_of_case == 'no' and type_of_final_order.all_false('spousal support', 'property or debt'):
   #### Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in ${ len(step_list) } steps
   % elif middle_of_case == 'yes':
   #### Your Personal Action Plan for changing a court order during your divorce case in ${ len(step_list) } steps
@@ -35,10 +32,11 @@ subquestion: |
   #### Your Personal Action Plan for changing a court order from your divorce case in ${ len(step_list) } steps
   % endif
   % endif
-  
-  
-  
-  
+    
+  % if "docassembledev" in interview_url():
+  <button id="akc_expand_all" class="btn other stuff">Expand all</button>
+  <button id="akc_collapse_all" class="btn other stuff">Collapse all</button>
+  % endif  
   
   % for iteration_index, step_tuple in enumerate( step_list ):
   ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }

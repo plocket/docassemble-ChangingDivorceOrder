@@ -20,6 +20,7 @@ Scenario: Row #30
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -49,6 +50,7 @@ Scenario: Row #30b
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -74,6 +76,7 @@ Scenario: Row #31
     | parents_agree                        | False                |         | 
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 8 steps"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -99,6 +102,7 @@ Scenario: Row #31b
     | parents_agree                        | False                |         | 
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 8 steps"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -127,6 +131,7 @@ Scenario: Row #52
     And I should see the phrase "Find out if you and your ex agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
     And I should see the phrase "Fill out the Certificate of Service"
@@ -155,6 +160,7 @@ Scenario: Row #52b
     And I should see the phrase "Find out if you and your ex agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -205,6 +211,7 @@ Scenario: Row #53b
     | parents_agree                          | False                |         | 
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 8 steps"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -261,6 +268,7 @@ Scenario: Row #74b
     And I should see the phrase "Find out if you and your ex agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -311,6 +319,7 @@ Scenario: Row #75b
     | parents_agree                           | False                |         | 
     And I should see the phrase "Your Personal Action Plan for changing a court order from your divorce case in 8 steps"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 30 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"

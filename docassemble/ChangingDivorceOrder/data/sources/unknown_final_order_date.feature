@@ -108,6 +108,7 @@ Scenario: Row #37 appeal and reconsider
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -140,6 +141,7 @@ Scenario: Row #38 appeal and set aside
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -205,6 +207,7 @@ Scenario: Row #40 reconsider appeal and set aside
     And I should see the phrase "Find out if you and the other parent agree"
     And I should see the phrase "Tell the court about your agreement"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -264,6 +267,7 @@ Scenario: Row #42
     | unknown_final_date['set aside']      | False                |         | 
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 2 steps"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Get more information or help"
     And I take a screenshot
@@ -316,6 +320,7 @@ Scenario: Row #44 appeal and reconsider
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 9 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about Motions to Reconsider"
     And I should see the phrase "Fill out the Motion to Reconsider forms"
@@ -346,6 +351,7 @@ Scenario: Row #45 appeal and set aside
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 9 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"
     And I should see the phrase "Fill out forms if you want to file a Motion to Set Aside"
@@ -407,6 +413,7 @@ Scenario: Row #47 reconsider appeal and set aside
     And I should see the phrase "Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in 12 steps"
     And I should see the phrase "Decide the steps you want to take"
     And I should see the phrase "Decide if you want to file an appeal"
+    And I tap the "#YXBwZWFsX3N0ZXA .al_toggle" element and stay on the same page
     And I should see the phrase "You have only 15 days from the day the court sent the order to you."
     And I should see the phrase "Fill out the Motion to Reconsider forms"
     And I should see the phrase "Learn about the Motion to Set Aside Judgment or Order"

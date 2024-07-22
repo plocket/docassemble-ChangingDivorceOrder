@@ -24,6 +24,7 @@ Feature: User paths
     And I should see the phrase "Do not wait to file your Motion to Modify"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Modify Custody, Visitation & Support Packet"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -49,6 +50,7 @@ Feature: User paths
     And I should see the phrase "Do not wait to file your Motion to Modify"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Modify Custody, Visitation & Support Packet"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -77,6 +79,7 @@ Feature: User paths
     And I should see the phrase "Do not wait to file your Motion to Modify"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Modify Custody, Visitation & Support Packet"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -102,6 +105,7 @@ Feature: User paths
     And I should see the phrase "Do not wait to file your Motion to Modify"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Modify Custody, Visitation & Support Packet"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve the other parent"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -128,6 +132,7 @@ Feature: User paths
     And I should see the phrase "Fill out the motion form to modify the spousal support order"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -151,6 +156,7 @@ Feature: User paths
     And I should see the phrase "Fill out the motion form to modify the spousal support order"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -177,6 +183,7 @@ Feature: User paths
     And I should see the phrase "Fill out the motion form to modify the property and debt division order"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Modify"
@@ -200,6 +207,7 @@ Feature: User paths
     And I should see the phrase "Fill out the motion form to modify the property and debt division order"
     And I should see the phrase "Fill out the Certificate of Service"
     And I should see the phrase "File your Request to Modify Order or Decree Concerning Spousal Maintenance or Property Allocation"
+    And I tap the "#ZmlsZV9tb3Rpb25fc3RlcA .al_toggle" element and stay on the same page
     And I should see the phrase "Pay the $75 fee to file your Motion to Modify"
     And I should see the phrase "Serve your ex"
     And I should see the phrase "What to expect after you file a Motion to Modify"
