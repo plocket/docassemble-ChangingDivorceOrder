@@ -661,10 +661,10 @@ content: |
   <div class="step-subheading">Options</div>
   % if type_of_response == 'modify' and type_of_modification.any_true('child support', 'custody') and type_of_modification.all_false('spousal support','property or debt', 'other'):
   If ${ other_party_in_case } files a **Motion to Modify** the parenting plan and custody order or the child support order, and you agree, you have options:
-  % elif type_of_response == 'modify' and type_of_modification.any_true('spousal support','property or debt'):
+  % elif type_of_response == 'modify' and type_of_modification.any_true('spousal support', 'property or debt'):
   If ${ other_party_in_case } files a **Request to Modify Order or Decree Concerning Spousal Maintenance or Property**, and you agree, you have options:
   % elif type_of_response == 'modify' and type_of_modification.any_true('child support', 'custody') and type_of_modification.any_true('spousal support','property or debt'):
-  If ${ other_party_in_case } files a  a **Motion to Modify** the parenting plan and custody order or the child support order and a **Request to Modify Order or Decree Concerning Spousal Maintenance or Property**, and you agree, you have options:
+  If ${ other_party_in_case } files a **Motion to Modify** the parenting plan and custody order or the child support order and a **Request to Modify Order or Decree Concerning Spousal Maintenance or Property**, and you agree, you have options:
   % elif middle_of_case == 'no' and type_of_response == 'set aside' and respond_to_set_aside  == 'agree':
   A **Motion to Set Aside Judgment or Order** asks the trial court to set aside or "undo" a judgment or final order in a case.  If granted, the case will move ahead as if the judgment had not been made.  If you agree with what ${ other_party_in_case } asked to set aside in the motion, you have options.  
   % endif
