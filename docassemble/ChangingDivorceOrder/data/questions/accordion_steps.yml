@@ -590,7 +590,7 @@ content: |
   <div class="step-subheading">Change the property and debt division</div>
   % endif
 
-  % if (user_need == 'change divorce order' and middle_of_case == 'no'and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['property or debt']):
+  % if (user_need == 'change divorce order' and middle_of_case == 'no' and type_of_final_order['spousal support']) or (user_need == 'respond to motion in divorce' and type_of_response == 'modify' and type_of_modification['property or debt']):
   Changing the outcome of final property and debt decisions in a divorce case can be tough. Once the court decides who gets what, it is not easy to undo those decisions.
   
   <div class = "example">
@@ -600,8 +600,11 @@ content: |
   <li>The court orders one person to receive some money from the marriage. If they spend that money, it cannot be taken back later.</li>
   </ul>
   </div>
+  If the judge decides there is a reason to change the final property and debt decision, the judge will issue a new order.
   % endif
-  
+  % if user_need == 'change foreign custody order' or (not user_need in('respond to motion in custody', 'respond to motion in divorce') and middle_of_case == 'no'):
+  The court charges $75 to file this motion. If you cannot afford the fee, you may be able to get the court to waive it. See the step about filing.
+  % endif
 --- 
 template: fill_modify_divorce_step
 subject: |
