@@ -687,7 +687,7 @@ subject: |
   % endif
 content: |
   % if (type_of_response == 'modify' and respond_to_modify == 'agree') or (middle_of_case == 'no' and type_of_response == 'set aside' and respond_to_set_aside == 'agree'):
-  If you agree with everything ${ other_party_in_case } wrote in their motion, you can state that in your response. Fill out:
+  If you agree with everything ${ other_party_in_case } wrote in their motion, you can state that in your response.
   
   % elif type_of_response == 'modify' and respond_to_modify in('some', 'none'):
   
