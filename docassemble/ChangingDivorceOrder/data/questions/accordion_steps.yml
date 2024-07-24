@@ -702,11 +702,18 @@ content: |
   
   In your response, explain why you disagree.
 
-  State what you do and do not agree with.
-
-  You must respond within 10 days from the day the motion  was hand-delivered to you or 13 days from the day it was mailed. You can see this date on the postmark of the envelope. 
+  If the {{ other_party_in_case }} served you:
+  
+  * by hand-delivery, email, or TrueFile, you have 10 days to respond to the court in writing.
+  * by mail, you have 13 days.
+  
+  Counting:
+  
+  *	Day 1 is the day after you delivered, emailed, or mailed it.  You can see the date something was mailed on the postmark of the envelope.
+  * Count weekends and holidays.
+  * If the due date is a weekend or holiday your response  is due the next day the court is open.  For example, if it is due on a Saturday, and the court is open Monday, your response is due Monday.  
     
-    <div class="step-subheading">Fill out</div>
+    <div class="step-subheading">Use</div>
   % if type_of_response == 'modify' and type_of_modification.any_true('custody', 'child support'):
   **Response to Motion**, [DR-725](https://public.courts.alaska.gov/web/forms/docs/dr-725.pdf) 
   
