@@ -152,12 +152,13 @@ code: |
       add_unique_step((respond_in_writing_step, "respond_in_writing_idx"), step_list)
     
     # Row 2-14  
-    # if type_of_response == 'modify' or (middle_of_case == 'no' and type_of_response == 'set aside'):
+    if type_of_response in('modify', 'reconsider') or (middle_of_case == 'no' and type_of_response == 'set aside'):
       add_unique_step((cert_of_service_step, "cert_of_service_idx"), step_list)
       add_unique_step((file_response_step, "file_response_idx"), step_list)
+      add_unique_step((serve_motion_response_step, "serve_motion_response_idx"), step_list)
     
     # Row 2-10, 12-14
-    # if type_of_response == 'modify' or (middle_of_case == 'no' and type_of_response == 'set aside'):
+    if type_of_response == 'modify' or (middle_of_case == 'no' and type_of_response == 'set aside'):
       add_unique_step((expect_after_response_step, "expect_after_response_idx"), step_list)
       
     if (type_of_response == 'modify' and respond_to_modify == 'agree') or (middle_of_case == 'no' and type_of_response == 'set aside' and respond_to_set_aside == 'agree'):
@@ -669,7 +670,7 @@ content: |
   A **Motion to Set Aside Judgment or Order** asks the trial court to set aside or "undo" a judgment or final order in a case.  If granted, the case will move ahead as if the judgment had not been made.  If you agree with what ${ other_party_in_case } asked to set aside in the motion, you have options.  
   % endif
   <ul>
-  <li>Fill out a response that states you agree. File your response with the court, and give ${ other_party_in_case } a copy. See Steps ${ respond_in_writing_idx }, ${ respond_in_writing_idx }, ${ file_response_idx } and ${ serve_response_idx }.<br>
+  <li>Fill out a response that states you agree. File your response with the court, and give ${ other_party_in_case } a copy. See Steps ${ respond_in_writing_idx }, ${ respond_in_writing_idx }, ${ file_response_idx } and ${ serve_motion_response_idx }.<br>
   <strong>Or</strong></li>
   <li>Contact ${ other_party_in_case }, write out your agreement together, and file it with the court. See Steps ${ contact_other_party_idx } and ${ file_agreement_idx}.</li>
   </ul>
@@ -742,7 +743,7 @@ content: |
 ---
 template: contact_other_party_step
 subject: |
-  Step ${ contact_other_party_idx }: Contact ${ other_party_in_case } and write out your agreement
+  Step ${ contact_other_party_idx }: Contact ${ other_party_in_case }, and write out your agreement
 content: |
   If you and ${ other_party_in_case } agree, and are able to work together to write out the agreement, you can fill out and file with the court:
   % if type_of_response == 'modify' and type_of_modification.any_true('custody','child support') and respond_to_modify == 'agree':
@@ -863,7 +864,7 @@ comment: |
 ---
 template: serve_motion_response_step
 subject: |
-  Step ${ serve_motion_idx }: 
+  Step ${ serve_motion_response_idx }: 
   % if user_need in('respond to motion in custody', 'respond to motion in divorce') and type_of_response == 'reconsider':
   If the judge asks you to respond to the Motion to Reconsider, serve ${ other_party_in_case }
   % else:

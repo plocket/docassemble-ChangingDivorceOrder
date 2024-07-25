@@ -1,5 +1,3 @@
-comment: |
-  Friday July 19 Responding tests still failing - weirdly
 include:
   - docassemble.AssemblyLine:assembly_line.yml
   - docassemble.AKA2JBranding:custom_organization.yml
@@ -923,6 +921,7 @@ attachment:
   variable name: changing_divorce_order_attachment[i]
   skip undefined: True
   # docx template file: dummy.docx
+  # docx template file: Respond_to_a_motion.docx
   docx template file: changing_divorce_order_action_plan.docx
 ---
 attachment:
@@ -932,4 +931,5 @@ attachment:
   variable name: docx_changing_divorce_order_attachment
   skip undefined: True
   # docx template file: dummy.docx
+  # docx template file:  Respond_to_a_motion.docx
   docx template file: changing_divorce_order_action_plan.docx
