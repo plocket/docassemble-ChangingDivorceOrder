@@ -1,4 +1,40 @@
 ---
+generic object: ALDocumentBundle
+template: x.get_email_copy
+content: |
+  Email a copy of your Action Plan to yourself or someone else
+---
+generic object: ALDocumentBundle
+template: x.send_email_template
+subject: |
+  % if user_need == 'change foreign custody order':
+  Your Personal Action Plan for changing your custody or Parenting Plan order from another state
+  % endif
+  % if user_need == 'respond to motion in divorce':
+  % if middle_of_case == 'no' and type_of_response == 'appeal':
+  Your Personal Action Plan for responding to the appeal your ex filed to change a court order from your divorce case
+  % endif
+  % if middle_of_case == 'no' and type_of_response != 'appeal':
+  Your Personal Action Plan for responding to a motion your ex filed to change a court order from your divorce case
+  % endif
+  % if middle_of_case == 'yes':
+  Your Personal Action Plan for responding to a motion your spouse filed to change a court order in your divorce case
+  % endif
+  % endif
+  % if user_need == 'change divorce order':
+  % if middle_of_case == 'no' and type_of_final_order.all_false('spousal support', 'property or debt'):
+  Your Personal Action Plan for changing your custody or Parenting Plan order from your divorce case in ${ len(step_list) } steps
+  % elif middle_of_case == 'yes':
+  Your Personal Action Plan for changing a court order during your divorce case
+  % else:
+  Your Personal Action Plan for changing a court order from your divorce case
+  % endif
+  % endif 
+content: |
+  Thank you for using Alaska Court System Access to Justice Easy Forms
+
+  Your Action Plan is attached.
+---
 id: final screen
 decoration: pen-to-square
 event: confirmation_and_download
@@ -43,6 +79,10 @@ subquestion: |
   % endfor
   
   ${ al_user_bundle.download_list_html() }
+  
+  &nbsp;
+
+  ${ al_user_bundle.send_button_html(show_editable_checkbox=False) }
   
   % if "docassembledev" in interview_url():
   [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
