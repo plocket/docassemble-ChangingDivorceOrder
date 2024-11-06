@@ -648,16 +648,16 @@ fields:
     datatype: radio
     code: |
       type_of_response_choices
-  - They filed: type_of_modification
+  - They filed a motion to change: type_of_modification
     datatype: checkboxes
     none of the above: False
     code: |
       [
-        {'custody': "A motion to change the custody and parenting plan order."},
-        {'child support': "A motion to change the child support order."},      
-        {'spousal support': "A motion to change the spousal support order."},
-        {'property or debt': "A motion to change the order that divides property and debt."},
-        {'other': "A motion to change something else."}
+        {'custody': "the custody and parenting plan order."},
+        {'child support': "the child support order."},      
+        {'spousal support': "the spousal support order."},
+        {'property or debt': "the order that divides property and debt."},
+        {'other': "something else."}
       ]
     js show if: 
       val('type_of_response') === 'modify'
@@ -665,12 +665,12 @@ fields:
 code: |
   if middle_of_case == 'yes':
     type_of_response_choices = [
-      {'modify': "A motion to change an order."},
+      {'modify': "a motion to change an order."},
       {'reconsider': "a Motion to Reconsider."}
       ]
   else:
     type_of_response_choices = [
-      {'modify': "A motion to change an order."},
+      {'modify': "a motion to change an order."},
       {'reconsider': "a Motion to Reconsider."},
       {'set aside': "a Motion to Set Aside Judgment or Order."},
       {'appeal': "an Appeal."}
